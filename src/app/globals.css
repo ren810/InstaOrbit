@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #141414;
+  color: #f2eeda;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #ee6436;
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ee6436;
+}
+
+/* Clip Paths */
+.clip-oct {
+  clip-path: polygon(
+    4rem 0px,
+    calc(50% - 15rem) 0px,
+    calc(50% - 13.5rem) 2.75rem,
+    calc(50% + 13.5rem) 2.75rem,
+    calc(50% + 15rem) 0px,
+    calc(100% - 4rem) 0px,
+    100% 4rem,
+    100% calc(100% - 4rem),
+    calc(100% - 4rem) 100%,
+    4rem 100%,
+    0px calc(100% - 4rem),
+    0px 4rem
+  );
+}
+
+.clip-corner {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+  );
+}
