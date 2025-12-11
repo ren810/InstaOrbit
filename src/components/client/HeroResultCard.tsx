@@ -18,6 +18,10 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [downloading, setDownloading] = useState(false);
+  const [downloadingAll, setDownloadingAll] = useState(false);
+  const [downloadProgress, setDownloadProgress] = useState('');
+  const [showFullCaption, setShowFullCaption] = useState(false);
   
   // Simplified carousel detection - check mediaUrls array directly
   const mediaUrls = result.mediaUrls || [];
@@ -92,13 +96,17 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
   const downloadAll = async () => {
     if (isCarousel) {
       playSound('success');
+      setDownloadingAll(true);
       for (let i = 0; i < mediaUrls.length; i++) {
+        setDownloadProgress(`Downloading ${i + 1} of ${mediaUrls.length}...`);
         await downloadMedia(mediaUrls[i].url, `instagram_${i + 1}.${mediaUrls[i].type === 'video' ? 'mp4' : 'jpg'}`);
         // Wait 1 second between downloads to avoid rate limiting
         if (i < mediaUrls.length - 1) {
           await new Promise(resolve => setTimeout(resolve, 1000));
         }
       }
+      setDownloadingAll(false);
+      setDownloadProgress('');
     }
   };
 
@@ -138,12 +146,16 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
     }
   };
 
-  const handleDownloadCurrent = () => {
+  const handleDownloadCurrent = async () => {
     playSound('success');
+    setDownloading(true);
+    setDownloadProgress('Preparing download...');
     const filename = isCarousel 
       ? `instagram_${currentIndex + 1}.${displayType === 'video' ? 'mp4' : 'jpg'}`
       : `instagram.${displayType === 'video' ? 'mp4' : 'jpg'}`;
-    downloadMedia(displayUrl, filename);
+    await downloadMedia(displayUrl, filename);
+    setDownloading(false);
+    setDownloadProgress('');
   };
 
   const handleDownloadThumbnail = () => {
@@ -281,9 +293,23 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
                     <div className="w-1 h-1 bg-base-500 rounded-full animate-pulse delay-150" />
                 </div>
               </div>
-              <h3 className="font-display text-3xl md:text-4xl text-base-100 mb-3 leading-tight">
-                {result.caption || result.title}
-              </h3>
+              <div className="mb-3">
+                <h3 
+                  className={`font-display text-3xl md:text-4xl text-base-100 leading-tight ${
+                    !showFullCaption ? 'line-clamp-2' : ''
+                  }`}
+                >
+                  {result.caption || result.title}
+                </h3>
+                {(result.caption || result.title) && (result.caption || result.title).length > 100 && (
+                  <button
+                    onClick={() => setShowFullCaption(!showFullCaption)}
+                    className="mt-2 text-xs font-mono text-base-500 hover:text-base-100 transition-colors uppercase tracking-wider"
+                  >
+                    {showFullCaption ? '← Show Less' : 'Show More →'}
+                  </button>
+                )}
+              </div>
               <p className="font-mono text-base-200 text-sm tracking-wide flex items-center gap-2">
                 <User className="w-4 h-4" />
                 {result.username || result.author}
@@ -330,18 +356,23 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
               <button
                 onClick={handleDownloadCurrent}
                 onMouseEnter={() => playSound('hover')}
-                className="group relative w-full h-20 bg-base-500 flex items-center justify-between px-8 overflow-hidden transition-all hover:bg-[#ff7a4d] clip-corner shadow-[0_0_20px_rgba(238,100,54,0.15)] hover:shadow-[0_0_30px_rgba(238,100,54,0.4)] cursor-pointer"
+                disabled={downloading || downloadingAll}
+                className="group relative w-full h-20 bg-base-500 flex items-center justify-between px-8 overflow-hidden transition-all hover:bg-[#ff7a4d] clip-corner shadow-[0_0_20px_rgba(238,100,54,0.15)] hover:shadow-[0_0_30px_rgba(238,100,54,0.4)] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                  <div className="relative z-10 flex flex-col items-start gap-1">
                     <span className="font-mono text-[10px] text-base-400/80 font-bold tracking-[0.2em] uppercase group-hover:text-base-400">
-                      {isCarousel ? `Download Item ${currentIndex + 1}` : 'Secure Link Ready'}
+                      {downloading ? 'Downloading...' : (isCarousel ? `Download Item ${currentIndex + 1}` : 'Secure Link Ready')}
                     </span>
                     <span className="font-display text-3xl text-base-400 leading-none mt-0.5">
-                      DOWNLOAD {isCarousel ? 'CURRENT' : 'FILE'}
+                      {downloading ? 'PLEASE WAIT' : `DOWNLOAD ${isCarousel ? 'CURRENT' : 'FILE'}`}
                     </span>
                  </div>
                  <div className="relative z-10 w-12 h-12 bg-base-400/20 flex items-center justify-center rounded-sm group-hover:bg-base-400/30 transition-colors border border-base-400/10">
-                    <Download className="text-base-400 w-7 h-7" />
+                    {downloading ? (
+                      <div className="w-7 h-7 border-3 border-base-400 border-t-transparent rounded-full animate-spin" />
+                    ) : (
+                      <Download className="text-base-400 w-7 h-7" />
+                    )}
                  </div>
                  
                  {/* Button Scanline */}
@@ -354,10 +385,20 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
                   <button
                     onClick={downloadAll}
                     onMouseEnter={() => playSound('hover')}
-                    className="h-14 border border-base-300 hover:border-base-500/50 flex items-center justify-center gap-3 text-base-200 hover:text-base-100 hover:bg-base-300/10 transition-all text-xs font-mono uppercase tracking-widest group cursor-pointer"
+                    disabled={downloading || downloadingAll}
+                    className="h-14 border border-base-300 hover:border-base-500/50 flex items-center justify-center gap-3 text-base-200 hover:text-base-100 hover:bg-base-300/10 transition-all text-xs font-mono uppercase tracking-widest group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Layers size={16} className="group-hover:text-base-500 transition-colors" /> 
-                    <span>Download All ({mediaUrls.length})</span>
+                    {downloadingAll ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-base-500 border-t-transparent rounded-full animate-spin" />
+                        <span>{downloadProgress}</span>
+                      </>
+                    ) : (
+                      <>
+                        <Layers size={16} className="group-hover:text-base-500 transition-colors" /> 
+                        <span>Download All ({mediaUrls.length})</span>
+                      </>
+                    )}
                   </button>
                 ) : (
                   <a

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { trackApiCall } from '@/lib/usage-tracker';
 
 // Instagram Download API using RapidAPI
 export async function POST(request: NextRequest) {
@@ -24,92 +25,128 @@ export async function POST(request: NextRequest) {
 
     // Sanitize URL to prevent injection
     const sanitizedUrl = encodeURIComponent(url);
+    const rapidApiKey1 = process.env.RAPIDAPI_KEY1;
+    const rapidApiKey2 = process.env.RAPIDAPI_KEY2;
 
-    // Try first API - Instagram Downloader
+    if (!rapidApiKey1 || !rapidApiKey2) {
+      return NextResponse.json(
+        { error: 'API keys not configured' },
+        { status: 500 }
+      );
+    }
+
+    // Try API 1 first: Instagram Downloader V2 API
     try {
-      const response1 = await fetch(
+      const response = await fetch(
+        `https://instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com/get-post?url=${sanitizedUrl}`,
+        {
+          method: 'GET',
+          headers: {
+            'x-rapidapi-key': rapidApiKey1,
+            'x-rapidapi-host': 'instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com'
+          }
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        
+        // Track successful API 1 call
+        trackApiCall('instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com', true);
+        
+        // Parse API 1 response structure
+        if (data && data.media && Array.isArray(data.media) && data.media.length > 0) {
+          const firstMedia = data.media[0];
+          const isCarousel = data.media.length > 1;
+          
+          // Map media array to standard format
+          const mediaUrls = data.media.map((item: any) => ({
+            type: item.is_video ? 'video' : 'image',
+            url: item.url,
+            thumbnail: item.is_video ? item.thumb : item.url // thumb is JPG for videos, url for images
+          }));
+          
+          return NextResponse.json({
+            success: true,
+            api: 'instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com',
+            data: {
+              thumbnail: firstMedia.is_video ? firstMedia.thumb : firstMedia.url, // thumb (JPG) for videos, url for images
+              title: firstMedia.caption || 'Instagram Media',
+              author: data.owner?.username ? '@' + data.owner.username : '@instagram',
+              downloadUrl: firstMedia.url || '#',
+              type: firstMedia.is_video ? 'video' : 'image',
+              quality: 'HD',
+              caption: firstMedia.caption || '',
+              username: data.owner?.username ? '@' + data.owner.username : '@instagram',
+              mediaUrls: mediaUrls,
+              isCarousel: isCarousel,
+              mediaCount: data.media.length,
+              likes: firstMedia.like_count,
+              comments: firstMedia.comment_count
+            }
+          });
+        }
+      }
+    } catch (error) {
+      console.log('API 1 failed, trying API 2...', error);
+      // Track failed API 1 call
+      trackApiCall('instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com', false);
+    }
+
+    // Try API 2: Instagram Downloader (Stories/Videos)
+    try {
+      const response = await fetch(
         `https://instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com/convert?url=${sanitizedUrl}`,
         {
           method: 'GET',
           headers: {
-            'x-rapidapi-key': process.env.RAPIDAPI_KEY || '377b748462msh8771d155e019b30p19bf99jsn1b1fe99821cf',
+            'x-rapidapi-key': rapidApiKey2,
             'x-rapidapi-host': 'instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com'
           }
         }
       );
 
-      if (response1.ok) {
-        const data = await response1.json();
+      if (response.ok) {
+        const data = await response.json();
         
-        // Check if data has media array (actual API response structure)
-        if (data && data.media && Array.isArray(data.media) && data.media.length > 0) {
-          const media = data.media[0]; // Get first media item
-          const isCarousel = data.media.length > 1;
-          
+        // Track successful API 2 call
+        trackApiCall('instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com', true);
+        
+        // Parse API 2 response structure
+        if (data && data.url) {
           return NextResponse.json({
             success: true,
+            api: 'instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com',
             data: {
-              thumbnail: media.thumbnail || 'https://picsum.photos/600/800',
-              title: data.caption || 'Instagram Media',
-              author: data.username || '@instagram',
-              downloadUrl: media.url || '#',
-              type: media.type || 'video',
-              quality: media.quality || 'HD',
+              thumbnail: data.thumbnail || data.url || 'https://picsum.photos/600/800',
+              title: data.title || 'Instagram Media',
+              author: data.author || '@instagram',
+              downloadUrl: data.url || '#',
+              type: data.type || 'video',
+              quality: data.quality || 'HD',
               caption: data.caption || '',
-              username: data.username || '@instagram',
-              mediaUrls: data.media || [],
-              isCarousel: isCarousel,
-              mediaCount: data.media.length
+              username: data.author || '@instagram',
+              mediaUrls: [{
+                type: data.type || 'video',
+                url: data.url,
+                thumbnail: data.thumbnail || data.url
+              }],
+              isCarousel: false,
+              mediaCount: 1
             }
           });
         }
       }
-    } catch (err) {
-      console.error('First API failed, trying second API...', err);
+    } catch (error) {
+      console.log('API 2 also failed', error);
+      // Track failed API 2 call
+      trackApiCall('instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com', false);
     }
 
-    // Try second API - Instagram120
-    try {
-      const response2 = await fetch(
-        'https://instagram120.p.rapidapi.com/api/instagram/posts',
-        {
-          method: 'POST',
-          headers: {
-            'x-rapidapi-key': process.env.RAPIDAPI_KEY || '377b748462msh8771d155e019b30p19bf99jsn1b1fe99821cf',
-            'x-rapidapi-host': 'instagram120.p.rapidapi.com',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ url })
-        }
-      );
-
-      if (response2.ok) {
-        const data = await response2.json();
-        
-        // Check if data is valid
-        if (data && data.data) {
-          const postData = data.data;
-          return NextResponse.json({
-            success: true,
-            data: {
-              thumbnail: postData.thumbnail_url || postData.display_url || 'https://picsum.photos/600/800',
-              title: postData.caption?.text || postData.title || 'Instagram Media',
-              author: postData.owner?.username || '@instagram',
-              downloadUrl: postData.video_url || postData.image_url || postData.display_url || '#',
-              type: postData.is_video ? 'video' : 'image',
-              mediaUrls: postData.carousel_media || []
-            }
-          });
-        }
-      }
-    } catch (err) {
-      console.error('Second API failed', err);
-    }
-
-    // If both APIs fail
+    // Both APIs failed
     return NextResponse.json(
       { error: 'Failed to fetch Instagram media. The post might be private or deleted.' },
-      { status: 500 }
+      { status: 404 }
     );
 
   } catch (error) {

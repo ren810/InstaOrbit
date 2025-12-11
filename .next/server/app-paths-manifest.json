@@ -1,5 +1,4 @@
 {
   "/page": "app/page.js",
-  "/api/download-media/route": "app/api/download-media/route.js",
-  "/api/proxy-image/route": "app/api/proxy-image/route.js"
+  "/admin/page": "app/admin/page.js"
 }

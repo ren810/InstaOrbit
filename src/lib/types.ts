@@ -30,6 +30,10 @@ export interface DownloadResult {
   mediaUrls?: MediaItem[];
   isCarousel?: boolean;
   mediaCount?: number;
+  likes?: number;
+  comments?: number;
+  duration?: number;
+  views?: number;
 }
 
 export enum DownloadState {
