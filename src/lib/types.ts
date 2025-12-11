@@ -11,11 +11,25 @@ export interface Feature {
   icon: React.ElementType;
 }
 
+export interface MediaItem {
+  type: string;
+  quality: string;
+  thumbnail: string;
+  url: string;
+}
+
 export interface DownloadResult {
   thumbnail: string;
   title: string;
   author: string;
   downloadUrl: string;
+  type?: string;
+  quality?: string;
+  caption?: string;
+  username?: string;
+  mediaUrls?: MediaItem[];
+  isCarousel?: boolean;
+  mediaCount?: number;
 }
 
 export enum DownloadState {

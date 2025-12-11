@@ -8,12 +8,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { OrbitButton } from '@/components/client/OrbitButton';
 import { DownloadState, DownloadResult } from '@/lib/types';
-import { MOCK_RESULT } from '@/lib/constants';
 import { Clipboard, Instagram } from 'lucide-react';
 import { useToast } from '@/components/client/ToastSystem';
 import { useSciFiSound } from '@/hooks/useSciFiSound';
 import { HeroResultCard } from '@/components/client/HeroResultCard';
 import { SystemLog } from '@/components/client/SystemLog';
+import { validateInstagramUrl } from '@/lib/validation';
+import { logger } from '@/lib/logger';
 
 export const HeroDownloadForm: React.FC = () => {
   const [url, setUrl] = useState('');
@@ -26,17 +27,53 @@ export const HeroDownloadForm: React.FC = () => {
   const handleDownload = async () => {
     if (!url) {
         showToast("Please enter a valid URL first", "error");
+        playSound('error');
+        return;
+    }
+
+    // Validate Instagram URL
+    if (!validateInstagramUrl(url)) {
+        showToast("Invalid Instagram URL. Please enter a valid Instagram post, reel, or story link.", "error");
+        playSound('error');
         return;
     }
     
     setState(DownloadState.LOADING);
+    playSound('click');
     
-    // Simulate API call
-    setTimeout(() => {
-      setResult(MOCK_RESULT);
-      setState(DownloadState.SUCCESS);
-      showToast("Media extraction successful", "success");
-    }, 2500);
+    try {
+      // Call real API
+      const response = await fetch('/api/download', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to download media');
+      }
+
+      if (data.success && data.data) {
+        setResult(data.data);
+        setState(DownloadState.SUCCESS);
+        showToast("Media extraction successful", "success");
+        playSound('success');
+      } else {
+        throw new Error('Invalid response from server');
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to download media';
+      logger.error(error instanceof Error ? error : new Error(errorMessage), { url });
+      
+      showToast(errorMessage, "error");
+      playSound('error');
+      setState(DownloadState.IDLE);
+      setResult(null);
+    }
   };
 
   const handlePaste = async () => {
@@ -46,8 +83,9 @@ export const HeroDownloadForm: React.FC = () => {
       showToast("Link pasted from clipboard", "info");
       playSound('click');
     } catch (err) {
-      console.error('Failed to read clipboard');
+      logger.error('Failed to read clipboard', { error: err });
       showToast("Clipboard access denied", "error");
+      playSound('error');
     }
   };
 

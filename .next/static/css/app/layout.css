@@ -633,6 +633,12 @@ video {
 .top-\[30\%\] {
   top: 30%;
 }
+.left-4 {
+  left: 1rem;
+}
+.right-4 {
+  right: 1rem;
+}
 .-z-10 {
   z-index: -10;
 }
@@ -794,6 +800,9 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-3 {
+  height: 0.75rem;
+}
 .min-h-\[400px\] {
   min-height: 400px;
 }
@@ -863,6 +872,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-3 {
+  width: 0.75rem;
+}
 .min-w-\[200px\] {
   min-width: 200px;
 }
@@ -931,11 +943,6 @@ video {
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.scale-100 {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 @keyframes spin {
 
   to {
@@ -983,6 +990,9 @@ video {
 }
 .cursor-none {
   cursor: none;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .select-none {
   -webkit-user-select: none;
@@ -1197,6 +1207,9 @@ video {
 }
 .bg-transparent {
   background-color: transparent;
+}
+.bg-base-400\/80 {
+  background-color: rgb(20 20 20 / 0.8);
 }
 .bg-\[url\(\'https\:\/\/grainy-gradients\.vercel\.app\/noise\.svg\'\)\] {
   background-image: url('https://grainy-gradients.vercel.app/noise.svg');
@@ -1741,6 +1754,11 @@ body {
   background-color: rgb(238 100 54 / 0.1);
 }
 
+.hover\:bg-base-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 100 54 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-base-100:hover {
   --tw-text-opacity: 1;
   color: rgb(242 238 218 / var(--tw-text-opacity, 1));
@@ -1939,6 +1957,11 @@ body {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 

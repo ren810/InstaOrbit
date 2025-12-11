@@ -4,6 +4,7 @@
 // Shows user-friendly error message with recovery option
 
 import { useEffect } from 'react'
+import { logger } from '@/lib/logger'
 
 export default function Error({
   error,
@@ -14,7 +15,7 @@ export default function Error({
 }) {
   useEffect(() => {
     // Log error to error reporting service
-    console.error(error)
+    logger.error(error, { digest: error.digest })
   }, [error])
 
   return (

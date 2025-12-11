@@ -1,0 +1,28 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#141414"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#262626" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.3"/>
+  
+  <!-- Orbit circles -->
+  <circle cx="600" cy="315" r="200" stroke="#ee6436" stroke-width="3" fill="none" opacity="0.6"/>
+  <circle cx="600" cy="315" r="150" stroke="#ee6436" stroke-width="2" fill="none" opacity="0.4"/>
+  <circle cx="600" cy="315" r="100" stroke="#ee6436" stroke-width="2" fill="none" opacity="0.2"/>
+  
+  <!-- Center dot -->
+  <circle cx="600" cy="315" r="15" fill="#ee6436"/>
+  
+  <!-- Title -->
+  <text x="600" y="480" font-family="monospace" font-size="72" font-weight="bold" fill="#f2eeda" text-anchor="middle">INSTAORBIT</text>
+  <text x="600" y="530" font-family="sans-serif" font-size="28" fill="#8c8a7f" text-anchor="middle">Professional Instagram Downloader</text>
+  
+  <!-- Accent lines -->
+  <line x1="200" y1="315" x2="400" y2="315" stroke="#ee6436" stroke-width="3" opacity="0.8"/>
+  <line x1="800" y1="315" x2="1000" y2="315" stroke="#ee6436" stroke-width="3" opacity="0.8"/>
+</svg>

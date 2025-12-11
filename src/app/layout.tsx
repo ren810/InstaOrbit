@@ -35,12 +35,29 @@ export const metadata: Metadata = {
     siteName: 'InstaOrbit',
     title: 'InstaOrbit | Professional Instagram Downloader',
     description: 'Download Instagram videos, reels, and photos in HD quality. Lightning fast and secure.',
+    images: [
+      {
+        url: '/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'InstaOrbit - Instagram Downloader',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'InstaOrbit | Professional Instagram Downloader',
     description: 'Download Instagram videos, reels, and photos in HD quality.',
     creator: '@instaorbit',
+    images: ['/og-image.svg'],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.svg', sizes: '180x180', type: 'image/svg+xml' },
+    ],
   },
   verification: {
     google: 'your-google-verification-code', // Add your verification code
@@ -63,10 +80,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Optimized font loading with preconnect */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
         <link href="https://fonts.cdnfonts.com/css/schabo" rel="stylesheet" />
+        
+        {/* Favicon and app icons */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
       </head>
       <body className="bg-base-400 text-base-100 antialiased overflow-x-hidden">
         <JsonLd />
