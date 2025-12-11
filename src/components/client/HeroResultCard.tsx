@@ -4,11 +4,10 @@
 // Requires: Framer Motion animations, event handlers for download/actions
 // Displays download results with interactive elements
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Music, Instagram, FileVideo, HardDrive, Clock, FileType, ChevronLeft, ChevronRight, Layers, User } from 'lucide-react';
 import { DownloadResult } from '@/lib/types';
-import Image from 'next/image';
 
 interface HeroResultCardProps {
   result: DownloadResult;
@@ -17,6 +16,8 @@ interface HeroResultCardProps {
 
 export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSound }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   
   // Simplified carousel detection - check mediaUrls array directly
   const mediaUrls = result.mediaUrls || [];
@@ -26,25 +27,65 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
   const displayUrl = currentMedia?.url || result.downloadUrl;
   const displayType = currentMedia?.type || result.type;
 
+  // Proxy Instagram URLs to bypass CORS
+  const getProxiedImageUrl = (url: string) => {
+    return `/api/proxy-image?url=${encodeURIComponent(url)}`;
+  };
+
+  const proxiedThumbnail = getProxiedImageUrl(displayThumbnail);
+
+  // Preload images when carousel changes
+  useEffect(() => {
+    if (isCarousel && mediaUrls.length > 0) {
+      // Preload current, next, and previous images through proxy
+      const preloadImages = [
+        currentIndex,
+        (currentIndex + 1) % mediaUrls.length,
+        (currentIndex - 1 + mediaUrls.length) % mediaUrls.length
+      ];
+      
+      preloadImages.forEach(index => {
+        const img = new Image();
+        img.src = getProxiedImageUrl(mediaUrls[index].thumbnail);
+      });
+    }
+  }, [currentIndex, isCarousel, mediaUrls]);
+
+  // Reset loaded state when image changes
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [currentIndex]);
+
   // Debug logging
   console.log('Carousel Debug:', {
     isCarousel,
     mediaCount: mediaUrls.length,
-    resultIsCarousel: result.isCarousel,
-    currentIndex
+    currentIndex,
+    displayThumbnail,
+    imageLoaded
   });
 
   const handlePrev = () => {
-    if (isCarousel) {
-      setCurrentIndex((prev) => (prev === 0 ? mediaUrls.length - 1 : prev - 1));
+    if (isCarousel && !isTransitioning) {
+      setIsTransitioning(true);
+      const newIndex = currentIndex === 0 ? mediaUrls.length - 1 : currentIndex - 1;
+      console.log('Moving to previous:', newIndex);
+      setCurrentIndex(newIndex);
       playSound('click');
+      // Reset transition lock quickly
+      setTimeout(() => setIsTransitioning(false), 100);
     }
   };
 
   const handleNext = () => {
-    if (isCarousel) {
-      setCurrentIndex((prev) => (prev === mediaUrls.length - 1 ? 0 : prev + 1));
+    if (isCarousel && !isTransitioning) {
+      setIsTransitioning(true);
+      const newIndex = currentIndex === mediaUrls.length - 1 ? 0 : currentIndex + 1;
+      console.log('Moving to next:', newIndex);
+      setCurrentIndex(newIndex);
       playSound('click');
+      // Reset transition lock quickly
+      setTimeout(() => setIsTransitioning(false), 100);
     }
   };
 
@@ -63,8 +104,20 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
 
   const downloadMedia = async (url: string, filename: string) => {
     try {
-      // Fetch the media as blob to bypass CORS
-      const response = await fetch(url);
+      // Use our server-side download proxy to bypass CORS
+      const response = await fetch('/api/download-media', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Download failed');
+      }
+
+      // Get the media as blob from our proxy
       const blob = await response.blob();
       const blobUrl = window.URL.createObjectURL(blob);
       
@@ -115,13 +168,29 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
           
           {/* Left Column: Thumbnail */}
           <div className="md:col-span-5 relative group bg-black overflow-hidden aspect-[4/5] md:aspect-auto min-h-[400px]">
-            <Image 
-              src={displayThumbnail} 
+            {/* Loading indicator */}
+            {!imageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center bg-base-400/50 backdrop-blur-sm z-30">
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-12 h-12 border-4 border-base-500 border-t-transparent rounded-full animate-spin" />
+                  <p className="text-base-100 font-mono text-sm">Loading image {currentIndex + 1}...</p>
+                </div>
+              </div>
+            )}
+            
+            <img 
+              key={`img-${currentIndex}-${displayThumbnail}`}
+              src={proxiedThumbnail}
               alt={result.title || "Instagram media"} 
-              fill
-              className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 40vw"
-              priority
+              className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-200"
+              onLoad={() => {
+                console.log('Image loaded:', currentIndex, proxiedThumbnail);
+                setImageLoaded(true);
+              }}
+              onError={(e) => {
+                console.error('Image failed to load:', currentIndex, proxiedThumbnail, e);
+                setImageLoaded(true);
+              }}
             />
             
             {/* Overlay Gradient */}
@@ -147,16 +216,40 @@ export const HeroResultCard: React.FC<HeroResultCardProps> = ({ result, playSoun
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-base-400/80 backdrop-blur-sm border border-base-300 hover:bg-base-500 hover:border-base-500 transition-all flex items-center justify-center z-10 group-hover:opacity-100 opacity-0"
+                  disabled={isTransitioning}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-base-400/90 backdrop-blur-sm border border-base-300 hover:bg-base-500 hover:border-base-500 transition-all flex items-center justify-center z-20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <ChevronLeft className="w-6 h-6 text-base-100" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-base-400/80 backdrop-blur-sm border border-base-300 hover:bg-base-500 hover:border-base-500 transition-all flex items-center justify-center z-10 group-hover:opacity-100 opacity-0"
+                  disabled={isTransitioning}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-base-400/90 backdrop-blur-sm border border-base-300 hover:bg-base-500 hover:border-base-500 transition-all flex items-center justify-center z-20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <ChevronRight className="w-6 h-6 text-base-100" />
                 </button>
+                
+                {/* Dot indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                  {mediaUrls.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        if (!isTransitioning && index !== currentIndex) {
+                          setIsTransitioning(true);
+                          setCurrentIndex(index);
+                          playSound('click');
+                          setTimeout(() => setIsTransitioning(false), 100);
+                        }
+                      }}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentIndex 
+                          ? 'bg-base-500 w-6' 
+                          : 'bg-base-300 hover:bg-base-200'
+                      }`}
+                    />
+                  ))}
+                </div>
               </>
             )}
 
