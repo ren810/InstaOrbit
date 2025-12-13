@@ -4,10 +4,10 @@ import React, { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 import { AnimatePresence } from 'framer-motion';
 
-import { InteractiveGrid } from '@/components/InteractiveGrid';
-import { Preloader } from '@/components/Preloader';
-import { CustomCursor } from '@/components/CustomCursor';
-import { ToastProvider } from '@/components/ToastSystem';
+import { InteractiveGrid } from '@/components/client/InteractiveGrid';
+import { Preloader } from '@/components/client/Preloader';
+import { CustomCursor } from '@/components/client/CustomCursor';
+import { ToastProvider } from '@/components/client/ToastSystem';
 
 interface ClientLayoutProps {
   children: React.ReactNode;
