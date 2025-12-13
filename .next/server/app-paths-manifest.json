@@ -1,4 +1,14 @@
 {
+  "/api/admin/usage/route": "app/api/admin/usage/route.js",
+  "/api/admin/auth/route": "app/api/admin/auth/route.js",
+  "/_not-found": "app/_not-found.js",
+  "/api/admin/test/route": "app/api/admin/test/route.js",
+  "/api/download-media/route": "app/api/download-media/route.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/page": "app/page.js"
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/api/download/route": "app/api/download/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/page": "app/page.js",
+  "/api/proxy-image/route": "app/api/proxy-image/route.js",
+  "/admin/page": "app/admin/page.js"
 }
