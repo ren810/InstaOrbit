@@ -1,9 +1,4 @@
 {
   "/page": "app/page.js",
-  "/api/download/route": "app/api/download/route.js",
-  "/api/download-media/route": "app/api/download-media/route.js",
-  "/api/proxy-image/route": "app/api/proxy-image/route.js",
-  "/not-found": "app/not-found.js",
-  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
-  "/admin/page": "app/admin/page.js"
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js"
 }

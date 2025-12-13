@@ -7,7 +7,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Lenis from 'lenis';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { InteractiveGrid } from '@/components/client/InteractiveGrid';
 import { Preloader } from '@/components/client/Preloader';
@@ -49,11 +49,16 @@ export const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       </AnimatePresence>
 
       {!loading && (
-        <main className="relative w-full min-h-screen bg-base-400 text-base-100 selection:bg-base-500 selection:text-white cursor-none">
+        <motion.main
+          className="relative w-full min-h-screen bg-base-400 text-base-100 selection:bg-base-500 selection:text-white cursor-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <CustomCursor />
           <InteractiveGrid />
           {children}
-        </main>
+        </motion.main>
       )}
     </>
   );
