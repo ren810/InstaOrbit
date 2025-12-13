@@ -33,11 +33,19 @@ export const InteractiveGrid: React.FC = () => {
 
     const createBlock = (posX: number, posY: number, gridX: number, gridY: number) => {
       const el = document.createElement('div');
-      el.classList.add('absolute', 'border', 'border-base-300/[0.3]', 'box-border', 'transition-colors', 'duration-300', 'ease-out');
-      el.style.width = `${GRID_BLOCK_SIZE}px`;
-      el.style.height = `${GRID_BLOCK_SIZE}px`;
-      el.style.left = `${posX}px`;
-      el.style.top = `${posY}px`;
+      el.className = 'block';
+      el.style.cssText = `
+        position: absolute;
+        background-color: transparent;
+        border: 0.5px solid #262626;
+        transition: border-color 0.3s ease;
+        box-sizing: border-box;
+        will-change: transform;
+        width: ${GRID_BLOCK_SIZE}px;
+        height: ${GRID_BLOCK_SIZE}px;
+        left: ${posX}px;
+        top: ${posY}px;
+      `;
       
       container.appendChild(el);
 
@@ -75,6 +83,8 @@ export const InteractiveGrid: React.FC = () => {
           blocksRef.current.push(block);
         }
       }
+
+      console.log(`Grid created: ${cols} × ${rows} = ${blocksRef.current.length} blocks`);
     };
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -107,11 +117,37 @@ export const InteractiveGrid: React.FC = () => {
         }
       }
 
-      if (closestBlock && minDist < mouse.radius) {
-        const now = Date.now();
-        closestBlock.element.style.borderColor = '#ee6436'; // base-500
-        closestBlock.element.style.boxShadow = '0 0 15px rgba(238, 100, 54, 0.15)';
-        closestBlock.highlightEndTime = now + GRID_HIGHLIGHT_DURATION;
+      if (!closestBlock || minDist > mouse.radius) return;
+
+      const now = Date.now();
+      
+      // Highlight the closest block
+      closestBlock.element.style.borderColor = '#ee6436';
+      closestBlock.highlightEndTime = now + GRID_HIGHLIGHT_DURATION;
+
+      // Optional: Highlight neighboring blocks (cluster effect)
+      const clusterSize = Math.floor(Math.random() * 2) + 1;
+      let currentBlock = closestBlock;
+      const highlighted = [closestBlock];
+
+      for (let i = 0; i < clusterSize; i++) {
+        const neighbors = blocksRef.current.filter((nb) => {
+          if (highlighted.includes(nb)) return false;
+
+          const dx = Math.abs(nb.gridX - currentBlock.gridX);
+          const dy = Math.abs(nb.gridY - currentBlock.gridY);
+
+          return dx <= 1 && dy <= 1;
+        });
+
+        if (neighbors.length === 0) break;
+
+        const randomNeighbor = neighbors[Math.floor(Math.random() * neighbors.length)];
+        randomNeighbor.element.style.borderColor = '#ee6436';
+        randomNeighbor.highlightEndTime = now + GRID_HIGHLIGHT_DURATION + i * 10;
+
+        highlighted.push(randomNeighbor);
+        currentBlock = randomNeighbor;
       }
     };
 
@@ -119,8 +155,7 @@ export const InteractiveGrid: React.FC = () => {
       const now = Date.now();
       blocksRef.current.forEach(block => {
         if (block.highlightEndTime > 0 && now > block.highlightEndTime) {
-          block.element.style.borderColor = ''; 
-          block.element.style.boxShadow = '';
+          block.element.style.borderColor = '#262626';
           block.highlightEndTime = 0;
         }
       });
@@ -146,7 +181,8 @@ export const InteractiveGrid: React.FC = () => {
   return (
     <div 
       ref={containerRef} 
-      className="fixed top-0 left-0 w-full h-screen -z-10 pointer-events-none overflow-hidden"
+      className="fixed top-0 left-0 w-full h-screen z-100 pointer-events-none overflow-hidden"
+      style={{ backgroundColor: 'transparent' }}
     />
   );
 };
