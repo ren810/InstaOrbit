@@ -1,20 +1,107 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 InstaOrbit - Professional Instagram Downloader
 
-# Run and deploy your AI Studio app
+A high-performance, modern Instagram media downloader with a stunning sci-fi interface. Download Instagram posts, reels, stories, and photos in HD quality.
 
-This contains everything you need to run your app locally.
+## ✨ Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1aYgjcWQJcXquF43KXnamBy8E6vWjV7Nn
+- 📥 Download Instagram videos, reels, and photos
+- 🎨 Modern sci-fi themed UI with animations
+- ⚡ Lightning-fast downloads
+- 📊 Usage tracking with MongoDB
+- 🔒 Secure and privacy-focused
+- 📱 Fully responsive design
+- 🎯 SEO optimized
 
-## Run Locally
+## 🛠️ Tech Stack
 
-**Prerequisites:**  Node.js
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Database:** MongoDB (Mongoose)
+- **Icons:** Lucide React
 
+## 🚀 Quick Start
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- Node.js 18+ installed
+- MongoDB database (local or MongoDB Atlas)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd instaorbit-downloader
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   
+   Create a `.env.local` file in the root directory:
+   ```env
+   MONGODB_URI=mongodb://localhost:27017/instaorbit
+   # Or use MongoDB Atlas:
+   # MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/instaorbit
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📦 Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## 🌐 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Add environment variable: `MONGODB_URI`
+4. Deploy!
+
+See [DEPLOYMENT_GUIDE.md](./BUILD_VERIFICATION.md) for detailed instructions.
+
+## 📁 Project Structure
+
+```
+src/
+├── app/              # Next.js app directory
+├── components/
+│   ├── client/      # Client-side components
+│   └── server/      # Server-side components
+├── lib/             # Utilities and database
+└── types/           # TypeScript types
+```
+
+## 🔧 Configuration
+
+- **MongoDB Setup:** See [MONGODB_SETUP.md](./MONGODB_SETUP.md)
+- **Admin Panel:** See [ADMIN_PANEL.md](./ADMIN_PANEL.md)
+
+## 📄 License
+
+All rights reserved © 2024 InstaOrbit
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+**Made with ❤️ for the Instagram community**
