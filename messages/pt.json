@@ -135,5 +135,197 @@
         "downloadIcon": "Ícone de download de conteúdo Instagram",
         "featureIcon": "Ilustração de recurso",
         "heroImage": "Interface do InstaOrbit Downloader de Instagram"
+    },
+    "blog": {
+        "backToHome": "Voltar para Início",
+        "blogLabel": "Blog",
+        "indexTitle": "Dicas e Guias de Download do Instagram",
+        "indexDescription": "Guias especializados sobre como baixar vídeos, reels e stories do Instagram. Aprenda os melhores métodos para salvar conteúdo em qualidade HD.",
+        "featuredPosts": "Posts em Destaque",
+        "allPosts": "Todos os Posts",
+        "readMore": "Ler Artigo",
+        "minRead": "min de leitura",
+        "guide": "Guia",
+        "whyUseThis": "Por Que Usar Este Método",
+        "readyToDownload": "Pronto para Baixar?",
+        "tryNowDescription": "Experimente nosso downloader de Instagram gratuito - sem marca d'água, qualidade HD, funciona em todos os dispositivos.",
+        "tryNowButton": "Baixar Agora",
+        "categories": {
+            "guide": "Guia",
+            "comparison": "Comparação",
+            "tutorial": "Tutorial"
+        },
+        "posts": {
+            "how-to-download-instagram-reels": {
+                "title": "Como Baixar Reels do Instagram para a Galeria (Guia 2025)",
+                "description": "Aprenda as formas mais rápidas de baixar Reels do Instagram com áudio e sem marca d'água.",
+                "metaDescription": "Aprenda 3 formas rápidas de baixar Reels do Instagram com áudio e sem marca d'água. Guia passo a passo para iPhone, Android e PC.",
+                "section1": {
+                    "title": "Por Que Baixar Reels do Instagram?",
+                    "content": "Os Reels do Instagram são viciantes, mas o app não facilita salvá-los diretamente no seu celular—especialmente se você quer com áudio e sem aquela marca d'água irritante. Seja para salvar um clipe engraçado para compartilhar no WhatsApp ou guardar uma receita para depois, este guia mostra como baixar Reels do Instagram em alta qualidade usando ferramentas gratuitas."
+                },
+                "section2": {
+                    "title": "Método 1: Método de Copiar Link (Melhor Qualidade)",
+                    "step1": "Abra o Instagram e encontre o Reel que você quer salvar.",
+                    "step2": "Toque nos Três Pontos (...) ou no ícone de Compartilhar no canto inferior direito.",
+                    "step3": "Toque em 'Copiar Link' para copiar a URL do Reel.",
+                    "step4": "Abra seu navegador e acesse nosso Downloader de Reels do Instagram.",
+                    "step5": "Cole o link e clique em 'Baixar'. O vídeo será salvo na sua galeria instantaneamente."
+                },
+                "benefit1": "Sem Marca D'água: Vídeo limpo perfeito para repostar",
+                "benefit2": "Áudio Original: Mantém a música e o som intactos",
+                "benefit3": "Seguro: Não precisa fazer login na sua conta do Instagram"
+            },
+            "best-instagram-video-downloader-2025": {
+                "title": "5 Melhores Downloaders de Vídeo do Instagram em 2025 (Testados e Avaliados)",
+                "description": "Testamos os melhores downloaders de vídeo do Instagram. Compare velocidade, qualidade e recursos.",
+                "metaDescription": "Testamos os melhores downloaders de vídeo do Instagram de 2025. Compare velocidade, qualidade e recursos para encontrar a melhor ferramenta gratuita.",
+                "section1": {
+                    "title": "Encontrando o Melhor Downloader de Instagram",
+                    "content": "Com centenas de sites de download surgindo, qual é realmente seguro, rápido e funciona em 2025? Testamos as ferramentas mais populares para que você não precise lidar com pop-ups ou links quebrados."
+                },
+                "section2": {
+                    "title": "Top 5 Downloaders de Instagram",
+                    "step1": "InstaOrbit (Escolha do Editor) - Processamento instantâneo, até 4K de qualidade, 100% grátis, sem marca d'água.",
+                    "step2": "SnapInsta - Interface limpa, suporta download de fotos. Pop-ups agressivos ocasionais.",
+                    "step3": "FastDL - Bom para posts carrossel e downloads em massa. Servidor às vezes fica lento.",
+                    "step4": "SaveInsta - Layout simples, oferece versão web e APK. Múltiplos botões podem confundir.",
+                    "step5": "Inflact - Funciona bem para contas comerciais. Requer registro para alguns recursos."
+                },
+                "benefit1": "Velocidade: InstaOrbit processa vídeos em menos de 2 segundos",
+                "benefit2": "Qualidade: Download de arquivos originais até 4K/1080p",
+                "benefit3": "Preço: 100% Grátis sem custos ocultos"
+            },
+            "download-instagram-stories-without-app": {
+                "title": "Como Baixar Stories do Instagram Sem App (Visualizador Anônimo)",
+                "description": "Salve Stories do Instagram antes de expirarem, sem instalar nenhum app.",
+                "metaDescription": "Quer salvar um Story do Instagram antes de expirar? Veja como baixar stories do IG online sem instalar app ou notificar o usuário.",
+                "section1": {
+                    "title": "Por Que Baixar Stories do Instagram?",
+                    "content": "Stories do Instagram desaparecem após 24 horas. Mas e se você quiser guardar uma lembrança, uma receita, ou baixar um vídeo do seu influenciador favorito? Diferente dos posts, o Instagram não oferece forma nativa de salvar stories de outras pessoas. Veja como baixar stories do Instagram sem app—sim, funciona no iPhone e Android."
+                },
+                "section2": {
+                    "title": "Método do Navegador (Sem App Necessário)",
+                    "step1": "Obtenha o Nome de Usuário: Você só precisa saber o nome de usuário exato (ex: @instagram).",
+                    "step2": "Acesse nosso Downloader de Stories: Navegue até a aba 'Stories' na nossa página inicial.",
+                    "step3": "Digite o Nome de Usuário: Digite o nome na caixa de busca.",
+                    "step4": "Visualize e Baixe: Nossa ferramenta buscará todos os stories ativos das últimas 24 horas.",
+                    "step5": "Salve Anonimamente: O usuário não verá seu nome na lista de 'Visualizações'."
+                },
+                "benefit1": "Visualização anônima - eles não saberão que você viu",
+                "benefit2": "Sem instalação de app - funciona no navegador",
+                "benefit3": "Baixe Destaques também - acesse stories arquivados"
+            },
+            "save-instagram-reels-without-watermark": {
+                "title": "Como Salvar Reels do Instagram Sem Marca D'água (Ferramenta Online Grátis)",
+                "description": "Remova a marca d'água do Instagram dos Reels para repostar no TikTok ou YouTube Shorts.",
+                "metaDescription": "Remover a marca d'água do Instagram dos Reels é essencial para repostar no TikTok ou YouTube Shorts. Aqui está a ferramenta gratuita.",
+                "section1": {
+                    "title": "Por Que Remover a Marca D'água?",
+                    "content": "Se você é criador de conteúdo, conhece a luta. Você passa horas editando um Reel, e quando salva no celular, o Instagram coloca uma marca d'água animada e seu logo no vídeo. Se você tentar repostar esse vídeo no TikTok ou YouTube Shorts, os algoritmos vão te penalizar. Eles suprimem conteúdo que tem logos de concorrentes."
+                },
+                "section2": {
+                    "title": "Solução Link-para-MP4",
+                    "step1": "Não use o botão 'Salvar' no menu de edição do Instagram.",
+                    "step2": "Em vez disso, Publique o Reel (ou poste em uma conta de teste privada).",
+                    "step3": "Após publicar, toque nos três pontos e selecione 'Copiar Link'.",
+                    "step4": "Acesse o InstaOrbit e cole o link.",
+                    "step5": "Clique em Baixar - você receberá o arquivo MP4 puro sem a marca d'água."
+                },
+                "benefit1": "MP4 Limpo: Arquivo direto do servidor do Instagram",
+                "benefit2": "Sem Marca D'água: Perfeito para repostar em outras plataformas",
+                "benefit3": "Alta Qualidade: Resolução original mantida"
+            }
+        }
+    },
+    "legal": {
+        "backToHome": "Voltar para Início",
+        "privacy": {
+            "title": "Política de Privacidade",
+            "metaDescription": "Política de Privacidade do InstaOrbit - Saiba como protegemos seus dados ao usar nosso serviço de download do Instagram.",
+            "lastUpdated": "Última Atualização",
+            "introduction": "No InstaOrbit, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações ao usar nosso serviço de download de conteúdo do Instagram.",
+            "sections": {
+                "dataCollection": {
+                    "title": "Dados que Coletamos",
+                    "content": "Coletamos dados mínimos para fornecer nosso serviço:\n\n• URLs do Instagram que você envia para download\n• Análises básicas de uso (visualizações de página, país)\n• Nenhuma informação pessoal é necessária\n• Não é necessário criar conta"
+                },
+                "dataUsage": {
+                    "title": "Como Usamos Seus Dados",
+                    "content": "Usamos os dados apenas para:\n\n• Processar suas solicitações de download\n• Melhorar o desempenho do nosso serviço\n• Analisar padrões de uso para melhorar a experiência\n• Nunca vendemos ou compartilhamos seus dados com terceiros"
+                },
+                "dataSecurity": {
+                    "title": "Segurança dos Dados",
+                    "content": "Sua segurança é nossa prioridade:\n\n• Todas as conexões usam criptografia HTTPS\n• URLs baixados não são armazenados permanentemente\n• Não usamos cookies para rastreamento\n• Não exigimos credenciais do Instagram"
+                },
+                "thirdParty": {
+                    "title": "Serviços de Terceiros",
+                    "content": "Usamos os seguintes serviços de terceiros:\n\n• Vercel para hospedagem e análises\n• Sem redes de publicidade\n• Sem pixels de rastreamento social\n• Sem corretores de dados"
+                },
+                "retention": {
+                    "title": "Retenção de Dados",
+                    "content": "Retemos dados minimamente:\n\n• Solicitações de download são processadas em tempo real\n• Sem armazenamento permanente de suas solicitações\n• Dados analíticos são anônimos\n• Você pode solicitar exclusão a qualquer momento"
+                },
+                "contact": {
+                    "title": "Entre em Contato",
+                    "content": "Para consultas de privacidade:\n\n• Email: support@instaorbits.com\n• Respondemos em 48 horas\n• Solicitações GDPR e CCPA atendidas"
+                }
+            },
+            "gdpr": {
+                "title": "Seus Direitos (GDPR/CCPA)",
+                "content": "Você tem o direito de acessar, corrigir ou excluir quaisquer dados pessoais que possamos ter. Como não coletamos informações pessoais, geralmente não há nada para excluir. Entre em contato conosco se tiver alguma preocupação."
+            }
+        },
+        "terms": {
+            "title": "Termos de Serviço",
+            "metaDescription": "Termos de Serviço do InstaOrbit - Leia nossos termos e condições para usar nosso downloader de vídeo do Instagram gratuito.",
+            "lastUpdated": "Última Atualização",
+            "introduction": "Bem-vindo ao InstaOrbit. Ao usar nosso serviço, você concorda com estes Termos de Serviço. Por favor, leia-os cuidadosamente antes de usar nossa ferramenta de download de conteúdo do Instagram.",
+            "sections": {
+                "acceptance": {
+                    "title": "Aceitação dos Termos",
+                    "content": "Ao acessar ou usar o InstaOrbit, você concorda em cumprir estes Termos. Se você não concordar com qualquer parte, não pode usar nosso serviço.\n\n• Você deve ter pelo menos 13 anos\n• Você concorda em usar o serviço legalmente\n• Estes termos podem ser atualizados a qualquer momento"
+                },
+                "usage": {
+                    "title": "Uso Aceitável",
+                    "content": "Você pode usar o InstaOrbit para:\n\n• Baixar conteúdo público do Instagram\n• Salvar conteúdo para uso pessoal não comercial\n• Fazer backup do seu próprio conteúdo do Instagram\n\nVocê NÃO pode usá-lo para:\n• Baixar conteúdo privado ou restrito\n• Violar direitos autorais ou privacidade\n• Revender ou redistribuir conteúdo baixado"
+                },
+                "intellectual": {
+                    "title": "Propriedade Intelectual",
+                    "content": "Informações importantes de direitos autorais:\n\n• O conteúdo baixado pertence aos seus criadores originais\n• O InstaOrbit não reivindica propriedade de nenhum conteúdo\n• Respeite sempre os direitos dos criadores de conteúdo\n• Não somos responsáveis por como você usa o conteúdo"
+                },
+                "prohibited": {
+                    "title": "Atividades Proibidas",
+                    "content": "As seguintes atividades são estritamente proibidas:\n\n• Tentar hackear ou explorar o serviço\n• Usar bots automatizados para downloads em massa\n• Baixar conteúdo para assédio\n• Contornar os termos de serviço do Instagram\n• Qualquer atividade ilegal usando nosso serviço"
+                },
+                "disclaimer": {
+                    "title": "Isenção de Responsabilidade",
+                    "content": "O InstaOrbit é fornecido 'como está' sem garantias:\n\n• Não garantimos 100% de tempo de atividade\n• O sucesso do download depende das políticas do Instagram\n• Não somos afiliados ao Instagram ou Meta\n• Use por sua própria conta e risco"
+                },
+                "changes": {
+                    "title": "Alterações nos Termos",
+                    "content": "Podemos modificar estes termos a qualquer momento:\n\n• As alterações entram em vigor imediatamente\n• O uso continuado constitui aceitação\n• Principais alterações serão anunciadas no site\n• Revise os termos periodicamente para atualizações"
+                }
+            }
+        },
+        "contact": {
+            "title": "Entre em Contato",
+            "metaDescription": "Entre em contato com o InstaOrbit - Obtenha ajuda com nosso downloader de vídeo do Instagram ou envie feedback.",
+            "subtitle": "Tem uma pergunta ou feedback? Adoraríamos ouvir de você. Nossa equipe geralmente responde em 24-48 horas.",
+            "email": {
+                "title": "Suporte por Email",
+                "subtitle": "Melhor para consultas detalhadas"
+            },
+            "response": {
+                "title": "Tempo de Resposta",
+                "subtitle": "Quando esperar uma resposta",
+                "time": "24-48 horas em dias úteis"
+            },
+            "faq": {
+                "title": "Confira Nossas Perguntas Frequentes",
+                "content": "Muitas perguntas comuns já estão respondidas em nossa seção de FAQ. Você pode encontrar sua resposta lá!",
+                "button": "Ver Perguntas Frequentes"
+            }
+        }
     }
 }

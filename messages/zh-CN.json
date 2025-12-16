@@ -135,5 +135,197 @@
         "downloadIcon": "下载Instagram内容图标",
         "featureIcon": "功能插图",
         "heroImage": "InstaOrbit Instagram下载器界面"
+    },
+    "blog": {
+        "backToHome": "返回首页",
+        "blogLabel": "博客",
+        "indexTitle": "Instagram下载技巧和指南",
+        "indexDescription": "专家指南教你如何下载Instagram视频、Reels和故事。学习保存HD高清内容的最佳方法。",
+        "featuredPosts": "精选文章",
+        "allPosts": "所有文章",
+        "readMore": "阅读文章",
+        "minRead": "分钟阅读",
+        "guide": "指南",
+        "whyUseThis": "为什么使用这个方法",
+        "readyToDownload": "准备好下载了吗？",
+        "tryNowDescription": "试用我们的免费Instagram下载器 - 无水印、高清画质、支持所有设备。",
+        "tryNowButton": "立即下载",
+        "categories": {
+            "guide": "指南",
+            "comparison": "对比",
+            "tutorial": "教程"
+        },
+        "posts": {
+            "how-to-download-instagram-reels": {
+                "title": "如何下载Instagram Reels到手机相册（2025完整指南）",
+                "description": "学习最快捷的方法下载Instagram Reels，保留音频且无水印。",
+                "metaDescription": "学习3种快速下载Instagram Reels的方法，保留音频无水印。iPhone、安卓和电脑的详细步骤指南。",
+                "section1": {
+                    "title": "为什么要下载Instagram Reels？",
+                    "content": "Instagram Reels让人上瘾，但应用程序并不方便直接保存到手机——尤其是你想要保留音频且没有那个烦人的水印。无论你想保存一个有趣的视频分享到微信，还是保存一个食谱以备后用，本指南都会教你如何使用免费工具下载高质量的Instagram Reels。"
+                },
+                "section2": {
+                    "title": "方法一：复制链接法（最佳画质）",
+                    "step1": "打开Instagram，找到你想保存的Reel。",
+                    "step2": "点击右下角的三个点(...)或分享图标。",
+                    "step3": "点击'复制链接'来复制Reel的网址。",
+                    "step4": "打开浏览器，访问我们的Instagram Reels下载器。",
+                    "step5": "粘贴链接并点击'下载'。视频会立即保存到你的相册。"
+                },
+                "benefit1": "无水印：干净的视频，完美适合转发",
+                "benefit2": "原始音频：保留音乐和声音",
+                "benefit3": "安全可靠：无需登录你的Instagram账号"
+            },
+            "best-instagram-video-downloader-2025": {
+                "title": "2025年5大最佳Instagram视频下载器（实测评选）",
+                "description": "我们测试了最热门的Instagram视频下载器。比较速度、画质和功能。",
+                "metaDescription": "我们测试了2025年最热门的Instagram视频下载器。比较速度、画质和功能，找到最适合Reels和故事的免费工具。",
+                "section1": {
+                    "title": "寻找最佳Instagram下载器",
+                    "content": "随着成百上千个下载网站的出现，哪一个才是真正安全、快速、并且在2025年仍然有效的？我们测试了最受欢迎的工具，这样你就不用处理弹窗广告或失效链接了。"
+                },
+                "section2": {
+                    "title": "五大Instagram下载器排名",
+                    "step1": "InstaOrbit（编辑推荐）- 即时处理，最高4K画质，100%免费，无水印。",
+                    "step2": "SnapInsta - 界面简洁，支持图片下载。偶尔有侵入性弹窗广告。",
+                    "step3": "FastDL - 适合轮播帖子和批量下载。服务器有时会超时。",
+                    "step4": "SaveInsta - 布局简单，提供网页版和APK。多个下载按钮可能造成困惑。",
+                    "step5": "Inflact - 适合商业账户。部分功能需要注册。"
+                },
+                "benefit1": "速度：InstaOrbit处理视频不到2秒",
+                "benefit2": "画质：下载原始文件，最高4K/1080p",
+                "benefit3": "价格：100%免费，无隐藏费用"
+            },
+            "download-instagram-stories-without-app": {
+                "title": "如何无需App下载Instagram故事（匿名查看器）",
+                "description": "在故事消失之前保存它，无需安装任何应用。",
+                "metaDescription": "想在Instagram故事过期前保存它？这里教你如何在线下载IG故事，无需安装应用也不会通知用户。",
+                "section1": {
+                    "title": "为什么要下载Instagram故事？",
+                    "content": "Instagram故事24小时后就会消失。但如果你想保存一个回忆、一个食谱，或者下载你喜欢的博主的视频呢？与帖子不同，Instagram没有内置功能来保存他人的故事。这里教你如何无需App下载Instagram故事——是的，iPhone和安卓都可以。"
+                },
+                "section2": {
+                    "title": "浏览器方法（无需App）",
+                    "step1": "获取用户名：你只需要知道确切的Instagram用户名（例如：@instagram）。",
+                    "step2": "访问我们的故事下载器：在首页导航到'故事'标签。",
+                    "step3": "输入用户名：在搜索框中输入用户名。",
+                    "step4": "查看并下载：我们的工具会获取过去24小时内的所有活动故事。",
+                    "step5": "匿名保存：用户不会在'已查看'列表中看到你的名字。"
+                },
+                "benefit1": "匿名查看 - 他们不会知道你看过",
+                "benefit2": "无需安装App - 在浏览器中使用",
+                "benefit3": "还可以下载精选 - 访问存档的故事"
+            },
+            "save-instagram-reels-without-watermark": {
+                "title": "如何无水印保存Instagram Reels（免费在线工具）",
+                "description": "移除Instagram Reels上的水印，方便转发到抖音或YouTube Shorts。",
+                "metaDescription": "从Reels移除Instagram水印对于转发到抖音或YouTube Shorts至关重要。这里是免费工具使用方法。",
+                "section1": {
+                    "title": "为什么要移除水印？",
+                    "content": "如果你是内容创作者，你一定知道这种痛苦。你花了好几个小时编辑一个Reel，当你保存到手机时，Instagram会在视频上添加跳动的水印和logo。如果你尝试将带水印的视频转发到抖音或YouTube Shorts，它们的算法会惩罚你。它们会抑制带有竞争对手logo的内容。"
+                },
+                "section2": {
+                    "title": "链接转MP4解决方案",
+                    "step1": "不要使用Instagram编辑菜单中的'保存'按钮。",
+                    "step2": "相反，先发布Reel（或发布到一个私人测试账号）。",
+                    "step3": "发布后，点击Reel上的三个点，选择'复制链接'。",
+                    "step4": "访问InstaOrbit并粘贴链接。",
+                    "step5": "点击下载 - 你会得到没有水印的原始MP4文件。"
+                },
+                "benefit1": "干净的MP4：直接来自Instagram服务器的原始文件",
+                "benefit2": "无水印：完美适合转发到其他平台",
+                "benefit3": "高画质：保持原始分辨率"
+            }
+        }
+    },
+    "legal": {
+        "backToHome": "返回首页",
+        "privacy": {
+            "title": "隐私政策",
+            "metaDescription": "InstaOrbit隐私政策 - 了解我们如何在您使用Instagram下载服务时保护您的数据和隐私。",
+            "lastUpdated": "最后更新",
+            "introduction": "在InstaOrbit，我们非常重视您的隐私。本隐私政策解释了当您使用我们的Instagram内容下载服务时，我们如何收集、使用和保护您的信息。",
+            "sections": {
+                "dataCollection": {
+                    "title": "我们收集的数据",
+                    "content": "我们仅收集提供服务所需的最少数据：\n\n• 您提交下载的Instagram链接\n• 基本使用分析（页面浏览量、国家）\n• 不需要个人信息\n• 无需创建账户"
+                },
+                "dataUsage": {
+                    "title": "我们如何使用您的数据",
+                    "content": "我们仅将数据用于：\n\n• 处理您的下载请求\n• 改进我们的服务性能\n• 分析使用模式以提升用户体验\n• 我们绝不出售或与第三方共享您的数据"
+                },
+                "dataSecurity": {
+                    "title": "数据安全",
+                    "content": "您的安全是我们的首要任务：\n\n• 所有连接使用HTTPS加密\n• 下载的URL不会永久存储\n• 不使用跟踪Cookie\n• 我们不要求或存储Instagram凭据"
+                },
+                "thirdParty": {
+                    "title": "第三方服务",
+                    "content": "我们使用以下第三方服务：\n\n• Vercel用于托管和分析\n• 无广告网络\n• 无社交跟踪像素\n• 无数据经纪商"
+                },
+                "retention": {
+                    "title": "数据保留",
+                    "content": "我们最小化保留数据：\n\n• 下载请求实时处理\n• 不永久存储您的请求\n• 分析数据是匿名的\n• 您可以随时请求删除"
+                },
+                "contact": {
+                    "title": "联系我们",
+                    "content": "隐私相关咨询：\n\n• 邮箱：support@instaorbits.com\n• 我们在48小时内回复\n• 尊重GDPR和CCPA请求"
+                }
+            },
+            "gdpr": {
+                "title": "您的权利（GDPR/CCPA）",
+                "content": "您有权访问、更正或删除我们可能拥有的任何个人数据。由于我们不收集个人信息，通常没有什么需要删除的。如有任何疑虑，请联系我们。"
+            }
+        },
+        "terms": {
+            "title": "服务条款",
+            "metaDescription": "InstaOrbit服务条款 - 阅读使用我们免费Instagram视频下载器的条款和条件。",
+            "lastUpdated": "最后更新",
+            "introduction": "欢迎使用InstaOrbit。使用我们的服务即表示您同意这些服务条款。请在使用我们的Instagram内容下载工具之前仔细阅读。",
+            "sections": {
+                "acceptance": {
+                    "title": "接受条款",
+                    "content": "访问或使用InstaOrbit即表示您同意受这些条款约束。如果您不同意任何部分，请勿使用我们的服务。\n\n• 您必须年满13岁\n• 您同意合法使用服务\n• 这些条款可能随时更新"
+                },
+                "usage": {
+                    "title": "可接受的使用",
+                    "content": "您可以使用InstaOrbit：\n\n• 下载公开的Instagram内容\n• 保存内容供个人非商业用途\n• 备份您自己的Instagram内容\n\n您不能使用它：\n• 下载私人或受限内容\n• 侵犯任何人的版权或隐私\n• 转售或重新分发下载的内容"
+                },
+                "intellectual": {
+                    "title": "知识产权",
+                    "content": "重要版权信息：\n\n• 下载的内容属于其原创作者\n• InstaOrbit不主张任何内容的所有权\n• 始终尊重内容创作者的权利\n• 我们不对您如何使用下载内容负责"
+                },
+                "prohibited": {
+                    "title": "禁止活动",
+                    "content": "以下活动严格禁止：\n\n• 试图黑客或利用服务\n• 使用自动机器人进行批量下载\n• 下载内容用于骚扰目的\n• 规避Instagram的服务条款\n• 使用我们的服务进行任何非法活动"
+                },
+                "disclaimer": {
+                    "title": "免责声明",
+                    "content": "InstaOrbit按'原样'提供，不作任何保证：\n\n• 我们不保证100%正常运行时间\n• 下载成功取决于Instagram的政策\n• 我们与Instagram或Meta无关联\n• 使用风险自负"
+                },
+                "changes": {
+                    "title": "条款变更",
+                    "content": "我们可能随时修改这些条款：\n\n• 更改立即生效\n• 继续使用即表示接受\n• 重大更改将在网站上公布\n• 定期查看条款更新"
+                }
+            }
+        },
+        "contact": {
+            "title": "联系我们",
+            "metaDescription": "联系InstaOrbit - 获取我们Instagram视频下载器的帮助或发送反馈。",
+            "subtitle": "有问题或反馈？我们很乐意听取您的意见。我们的团队通常在24-48小时内回复。",
+            "email": {
+                "title": "邮件支持",
+                "subtitle": "适合详细咨询"
+            },
+            "response": {
+                "title": "回复时间",
+                "subtitle": "何时可以收到回复",
+                "time": "工作日24-48小时"
+            },
+            "faq": {
+                "title": "先查看常见问题",
+                "content": "许多常见问题已在我们的FAQ部分得到解答。您可能在那里找到答案！",
+                "button": "查看常见问题"
+            }
+        }
     }
 }

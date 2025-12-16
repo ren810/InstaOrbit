@@ -135,5 +135,197 @@
         "downloadIcon": "Icône de téléchargement de contenu Instagram",
         "featureIcon": "Illustration de fonctionnalité",
         "heroImage": "Interface du téléchargeur InstaOrbit Instagram"
+    },
+    "blog": {
+        "backToHome": "Retour à l'accueil",
+        "blogLabel": "Blog",
+        "indexTitle": "Conseils et Guides de Téléchargement Instagram",
+        "indexDescription": "Guides d'experts sur comment télécharger des vidéos, reels et stories Instagram. Apprenez les meilleures méthodes pour sauvegarder du contenu en qualité HD.",
+        "featuredPosts": "Articles en vedette",
+        "allPosts": "Tous les articles",
+        "readMore": "Lire l'article",
+        "minRead": "min de lecture",
+        "guide": "Guide",
+        "whyUseThis": "Pourquoi utiliser cette méthode",
+        "readyToDownload": "Prêt à télécharger ?",
+        "tryNowDescription": "Essayez notre téléchargeur Instagram gratuit - sans filigrane, qualité HD, fonctionne sur tous les appareils.",
+        "tryNowButton": "Télécharger maintenant",
+        "categories": {
+            "guide": "Guide",
+            "comparison": "Comparaison",
+            "tutorial": "Tutoriel"
+        },
+        "posts": {
+            "how-to-download-instagram-reels": {
+                "title": "Comment Télécharger les Reels Instagram dans votre Galerie (Guide 2025)",
+                "description": "Apprenez les façons les plus rapides de télécharger les Reels Instagram avec audio et sans filigrane.",
+                "metaDescription": "Apprenez 3 façons rapides de télécharger les Reels Instagram avec audio et sans filigrane. Guide étape par étape pour iPhone, Android et PC.",
+                "section1": {
+                    "title": "Pourquoi Télécharger les Reels Instagram ?",
+                    "content": "Les Reels Instagram créent une dépendance, mais l'application ne facilite pas leur sauvegarde directe sur votre téléphone — surtout si vous les voulez avec audio et sans ce filigrane agaçant. Que vous vouliez sauvegarder un clip amusant pour le partager sur WhatsApp ou garder une recette pour plus tard, ce guide couvre comment télécharger les Reels Instagram en haute qualité avec des outils gratuits."
+                },
+                "section2": {
+                    "title": "Méthode 1 : La Méthode Copier le Lien (Meilleure Qualité)",
+                    "step1": "Ouvrez Instagram et trouvez le Reel que vous voulez sauvegarder.",
+                    "step2": "Appuyez sur les trois points (...) ou l'icône Partager en bas à droite.",
+                    "step3": "Appuyez sur 'Copier le lien' pour copier l'URL du Reel.",
+                    "step4": "Ouvrez votre navigateur et allez sur notre Téléchargeur de Reels Instagram.",
+                    "step5": "Collez le lien et cliquez sur 'Télécharger'. La vidéo sera sauvegardée dans votre galerie instantanément."
+                },
+                "benefit1": "Sans Filigrane : Vidéo propre parfaite pour reposter",
+                "benefit2": "Audio Original : Conserve la musique et le son",
+                "benefit3": "Sécurisé : Pas besoin de se connecter à votre compte Instagram"
+            },
+            "best-instagram-video-downloader-2025": {
+                "title": "Les 5 Meilleurs Téléchargeurs de Vidéos Instagram en 2025 (Testés et Évalués)",
+                "description": "Nous avons testé les meilleurs téléchargeurs de vidéos Instagram. Comparez vitesse, qualité et fonctionnalités.",
+                "metaDescription": "Nous avons testé les meilleurs téléchargeurs de vidéos Instagram de 2025. Comparez vitesse, qualité et fonctionnalités pour trouver le meilleur outil gratuit.",
+                "section1": {
+                    "title": "Trouver le Meilleur Téléchargeur Instagram",
+                    "content": "Avec des centaines de sites de téléchargement qui apparaissent, lequel est vraiment sûr, rapide et fonctionne en 2025 ? Nous avons testé les outils les plus populaires pour que vous n'ayez pas à gérer les pop-ups ou les liens cassés."
+                },
+                "section2": {
+                    "title": "Top 5 des Téléchargeurs Instagram",
+                    "step1": "InstaOrbit (Choix de la Rédaction) - Traitement instantané, jusqu'à 4K de qualité, 100% gratuit, sans filigrane.",
+                    "step2": "SnapInsta - Interface propre, supporte le téléchargement de photos. Parfois des pop-ups agressifs.",
+                    "step3": "FastDL - Bon pour les posts carrousel et les téléchargements en masse. Le serveur peut parfois être lent.",
+                    "step4": "SaveInsta - Mise en page simple, offre version web et APK. Plusieurs boutons de téléchargement peuvent porter à confusion.",
+                    "step5": "Inflact - Fonctionne bien pour les comptes professionnels. Inscription requise pour certaines fonctionnalités."
+                },
+                "benefit1": "Vitesse : InstaOrbit traite les vidéos en moins de 2 secondes",
+                "benefit2": "Qualité : Téléchargement de fichiers originaux jusqu'à 4K/1080p",
+                "benefit3": "Prix : 100% Gratuit sans frais cachés"
+            },
+            "download-instagram-stories-without-app": {
+                "title": "Comment Télécharger les Stories Instagram Sans App (Visualiseur Anonyme)",
+                "description": "Sauvegardez les Stories Instagram avant qu'elles n'expirent, sans installer d'app.",
+                "metaDescription": "Vous voulez sauvegarder une Story Instagram avant son expiration ? Voici comment télécharger les stories IG en ligne sans installer d'app ni notifier l'utilisateur.",
+                "section1": {
+                    "title": "Pourquoi Télécharger les Stories Instagram ?",
+                    "content": "Les Stories Instagram disparaissent après 24 heures. Mais que faire si vous voulez garder un souvenir, sauvegarder une recette, ou télécharger une vidéo de votre influenceur préféré ? Contrairement aux publications, Instagram n'offre pas de moyen intégré de sauvegarder les stories des autres. Voici comment télécharger les stories Instagram sans app — oui, ça fonctionne sur iPhone et Android."
+                },
+                "section2": {
+                    "title": "Méthode Navigateur (Pas d'App Nécessaire)",
+                    "step1": "Obtenez le Nom d'utilisateur : Vous devez juste connaître le nom d'utilisateur exact (ex: @instagram).",
+                    "step2": "Allez sur notre Téléchargeur de Stories : Naviguez vers l'onglet 'Story' sur notre page d'accueil.",
+                    "step3": "Entrez le Nom d'utilisateur : Tapez le nom dans la zone de recherche.",
+                    "step4": "Visualisez et Téléchargez : Notre outil récupérera toutes les stories actives des dernières 24 heures.",
+                    "step5": "Sauvegardez de manière Anonyme : L'utilisateur ne verra pas votre nom dans la liste 'Vu par'."
+                },
+                "benefit1": "Visualisation anonyme - ils ne sauront pas que vous avez regardé",
+                "benefit2": "Pas d'installation d'app requise - fonctionne dans le navigateur",
+                "benefit3": "Téléchargez aussi les Highlights - accédez aux stories archivées"
+            },
+            "save-instagram-reels-without-watermark": {
+                "title": "Comment Sauvegarder les Reels Instagram Sans Filigrane (Outil en Ligne Gratuit)",
+                "description": "Supprimez le filigrane Instagram des Reels pour reposter sur TikTok ou YouTube Shorts.",
+                "metaDescription": "Supprimer le filigrane Instagram des Reels est essentiel pour reposter sur TikTok ou YouTube Shorts. Voici l'outil gratuit pour le faire.",
+                "section1": {
+                    "title": "Pourquoi Supprimer le Filigrane ?",
+                    "content": "Si vous êtes créateur de contenu, vous connaissez ce problème. Vous passez des heures à éditer un Reel, et quand vous le sauvegardez sur votre téléphone, Instagram ajoute un filigrane animé et son logo sur la vidéo. Si vous essayez de reposter cette vidéo sur TikTok ou YouTube Shorts, leurs algorithmes vous pénaliseront. Ils suppriment le contenu qui a des logos de concurrents."
+                },
+                "section2": {
+                    "title": "La Solution Lien-vers-MP4",
+                    "step1": "N'utilisez pas le bouton 'Enregistrer' dans le menu d'édition Instagram.",
+                    "step2": "À la place, Publiez le Reel (ou postez-le sur un compte de test privé).",
+                    "step3": "Après publication, appuyez sur les trois points et sélectionnez 'Copier le lien'.",
+                    "step4": "Allez sur InstaOrbit et collez le lien.",
+                    "step5": "Cliquez sur Télécharger - vous obtenez le fichier MP4 brut sans le filigrane."
+                },
+                "benefit1": "MP4 Propre : Fichier direct du serveur Instagram",
+                "benefit2": "Sans Filigrane : Parfait pour reposter sur d'autres plateformes",
+                "benefit3": "Haute Qualité : Résolution originale maintenue"
+            }
+        }
+    },
+    "legal": {
+        "backToHome": "Retour à l'accueil",
+        "privacy": {
+            "title": "Politique de Confidentialité",
+            "metaDescription": "Politique de Confidentialité InstaOrbit - Découvrez comment nous protégeons vos données lors de l'utilisation de notre service de téléchargement Instagram.",
+            "lastUpdated": "Dernière mise à jour",
+            "introduction": "Chez InstaOrbit, nous prenons votre vie privée au sérieux. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos informations lors de l'utilisation de notre service de téléchargement de contenu Instagram.",
+            "sections": {
+                "dataCollection": {
+                    "title": "Données que nous collectons",
+                    "content": "Nous collectons des données minimales pour fournir notre service :\n\n• URLs Instagram que vous soumettez pour téléchargement\n• Analyses d'utilisation de base (pages vues, pays)\n• Aucune information personnelle requise\n• Aucune création de compte nécessaire"
+                },
+                "dataUsage": {
+                    "title": "Comment nous utilisons vos données",
+                    "content": "Nous utilisons les données uniquement pour :\n\n• Traiter vos demandes de téléchargement\n• Améliorer les performances de notre service\n• Analyser les modèles d'utilisation pour améliorer l'expérience\n• Nous ne vendons ni ne partageons jamais vos données avec des tiers"
+                },
+                "dataSecurity": {
+                    "title": "Sécurité des données",
+                    "content": "Votre sécurité est notre priorité :\n\n• Toutes les connexions utilisent le cryptage HTTPS\n• Les URLs téléchargées ne sont pas stockées de façon permanente\n• Aucun cookie de suivi n'est utilisé\n• Nous n'exigeons pas d'identifiants Instagram"
+                },
+                "thirdParty": {
+                    "title": "Services tiers",
+                    "content": "Nous utilisons les services tiers suivants :\n\n• Vercel pour l'hébergement et les analyses\n• Aucun réseau publicitaire\n• Aucun pixel de suivi social\n• Aucun courtier en données"
+                },
+                "retention": {
+                    "title": "Conservation des données",
+                    "content": "Nous conservons les données de façon minimale :\n\n• Les demandes de téléchargement sont traitées en temps réel\n• Aucun stockage permanent de vos demandes\n• Les données analytiques sont anonymisées\n• Vous pouvez demander la suppression à tout moment"
+                },
+                "contact": {
+                    "title": "Contactez-nous",
+                    "content": "Pour les questions de confidentialité :\n\n• Email : support@instaorbits.com\n• Nous répondons sous 48 heures\n• Demandes RGPD et CCPA honorées"
+                }
+            },
+            "gdpr": {
+                "title": "Vos droits (RGPD/CCPA)",
+                "content": "Vous avez le droit d'accéder, de corriger ou de supprimer toute donnée personnelle que nous pourrions avoir. Comme nous ne collectons pas d'informations personnelles, il n'y a généralement rien à supprimer. Contactez-nous si vous avez des préoccupations."
+            }
+        },
+        "terms": {
+            "title": "Conditions d'utilisation",
+            "metaDescription": "Conditions d'utilisation InstaOrbit - Lisez nos conditions pour utiliser notre téléchargeur de vidéos Instagram gratuit.",
+            "lastUpdated": "Dernière mise à jour",
+            "introduction": "Bienvenue sur InstaOrbit. En utilisant notre service, vous acceptez ces Conditions d'utilisation. Veuillez les lire attentivement avant d'utiliser notre outil de téléchargement de contenu Instagram.",
+            "sections": {
+                "acceptance": {
+                    "title": "Acceptation des conditions",
+                    "content": "En accédant ou en utilisant InstaOrbit, vous acceptez d'être lié par ces conditions. Si vous n'êtes pas d'accord, vous ne pouvez pas utiliser notre service.\n\n• Vous devez avoir au moins 13 ans\n• Vous acceptez d'utiliser le service légalement\n• Ces conditions peuvent être mises à jour à tout moment"
+                },
+                "usage": {
+                    "title": "Utilisation acceptable",
+                    "content": "Vous pouvez utiliser InstaOrbit pour :\n\n• Télécharger du contenu Instagram disponible publiquement\n• Sauvegarder du contenu pour un usage personnel non commercial\n• Sauvegarder votre propre contenu Instagram\n\nVous ne pouvez PAS l'utiliser pour :\n• Télécharger du contenu privé ou restreint\n• Violer les droits d'auteur ou la vie privée\n• Revendre ou redistribuer le contenu téléchargé"
+                },
+                "intellectual": {
+                    "title": "Propriété intellectuelle",
+                    "content": "Informations importantes sur le droit d'auteur :\n\n• Le contenu téléchargé appartient à ses créateurs originaux\n• InstaOrbit ne revendique aucun droit de propriété sur le contenu\n• Respectez toujours les droits des créateurs de contenu\n• Nous ne sommes pas responsables de votre utilisation du contenu"
+                },
+                "prohibited": {
+                    "title": "Activités interdites",
+                    "content": "Les activités suivantes sont strictement interdites :\n\n• Tenter de pirater ou d'exploiter le service\n• Utiliser des bots automatisés pour des téléchargements en masse\n• Télécharger du contenu à des fins de harcèlement\n• Contourner les conditions de service d'Instagram\n• Toute activité illégale utilisant notre service"
+                },
+                "disclaimer": {
+                    "title": "Clause de non-responsabilité",
+                    "content": "InstaOrbit est fourni 'tel quel' sans garanties :\n\n• Nous ne garantissons pas une disponibilité à 100%\n• Le succès du téléchargement dépend des politiques d'Instagram\n• Nous ne sommes pas affiliés à Instagram ou Meta\n• Utilisez à vos propres risques"
+                },
+                "changes": {
+                    "title": "Modifications des conditions",
+                    "content": "Nous pouvons modifier ces conditions à tout moment :\n\n• Les modifications prennent effet immédiatement\n• L'utilisation continue constitue une acceptation\n• Les changements majeurs seront annoncés sur le site\n• Consultez régulièrement les conditions pour les mises à jour"
+                }
+            }
+        },
+        "contact": {
+            "title": "Contactez-nous",
+            "metaDescription": "Contactez InstaOrbit - Obtenez de l'aide pour notre téléchargeur de vidéos Instagram ou envoyez vos commentaires.",
+            "subtitle": "Vous avez une question ou un commentaire ? Nous serions ravis de vous entendre. Notre équipe répond généralement sous 24-48 heures.",
+            "email": {
+                "title": "Support par email",
+                "subtitle": "Idéal pour les demandes détaillées"
+            },
+            "response": {
+                "title": "Temps de réponse",
+                "subtitle": "Quand attendre une réponse",
+                "time": "24-48 heures les jours ouvrables"
+            },
+            "faq": {
+                "title": "Consultez d'abord notre FAQ",
+                "content": "De nombreuses questions courantes sont déjà répondues dans notre section FAQ. Vous pourriez y trouver votre réponse !",
+                "button": "Voir la FAQ"
+            }
+        }
     }
 }
