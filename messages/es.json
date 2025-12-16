@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "title": "InstaOrbit | Descargador de Videos Instagram Gratis - Reels Historias HD Sin Marca de Agua",
+        "titleTemplate": "{title} | InstaOrbit - Mejor Descargador Instagram 2025",
+        "description": "Descarga videos de Instagram, reels, historias en calidad HD GRATIS. Sin marca de agua, sin app. Mejor descargador de videos Instagram, guardador de historias y descargador de reels online. Rápido, seguro, funciona en iPhone, Android, PC.",
+        "keywords": "descargador de videos instagram, descargador de reels instagram, guardador de historias instagram, guardador de historias, descargador insta, descargar historias instagram, visor de historias instagram, descargar historias instagram, descargar reels instagram en HD, guardar reels instagram sin marca de agua, descargar reels online gratis, guardador de videos reels instagram, app descargador de reels, descargar IG reels rápido, guardador de historias instagram online, descargar videos de historias instagram, guardar historias instagram gratis, ver historias instagram anónimamente, descargador de historias instagram sin marca de agua, ver historias instagram sin cuenta, descargador de videos instagram gratis, descargar videos instagram sin app, guardar videos instagram calidad HD, descargador de IGTV instagram, descargar publicaciones carrusel instagram, guardador de videos instagram online, descargador instagram sin marca de agua, descargador de videos instagram 4K, descargador instagram sin app, descargador instagram gratis sin registro, descargar contenido instagram offline, descargador de medios instagram gratis, instasave descargador, saveinsta, guardador de historias insta, visor de historias instagram online, cómo descargar videos de instagram, cómo guardar historias instagram, mejor descargador instagram, descargador de videos instagram online, guardador de historias instagram gratis, calidad HD, 4K, alta resolución, descargas sin marca de agua, descargas rápidas, descargas ilimitadas, descargador instagram para iPhone, guardador de videos instagram Android, descargador instagram móvil, descargar instagram en PC, descargador instagram Mac"
+    },
+    "nav": {
+        "features": "Características",
+        "howItWorks": "Cómo Funciona",
+        "faq": "Preguntas Frecuentes",
+        "download": "Descargar Ahora"
+    },
+    "hero": {
+        "badge": "Sistema Activo v2.4",
+        "title": "ORBIT",
+        "titleHighlight": "DESCARGADOR",
+        "description": "Utilidad de extracción de medios de alto rendimiento para Instagram. Descarga Videos, Reels, Fotos e IGTV en calidad original.",
+        "inputPlaceholder": "Pega el enlace de Instagram aquí...",
+        "downloadButton": "Descargar",
+        "supportedFormats": "Soporta: Reels, Videos, Fotos, Historias, IGTV"
+    },
+    "features": {
+        "title": "¿Por Qué Elegir InstaOrbit?",
+        "subtitle": "El descargador de Instagram más potente con funciones de nivel empresarial",
+        "items": {
+            "fast": {
+                "title": "Descargas Ultra Rápidas",
+                "description": "Descarga contenido de Instagram en segundos con nuestros servidores optimizados. Sin esperas, sin retrasos."
+            },
+            "hd": {
+                "title": "Calidad HD Garantizada",
+                "description": "Obtén la máxima calidad disponible - hasta 4K para videos y resolución original para fotos."
+            },
+            "noWatermark": {
+                "title": "Sin Marcas de Agua",
+                "description": "Descarga contenido limpio sin marcas de agua ni logos. Medios puros y originales."
+            },
+            "unlimited": {
+                "title": "Descargas Ilimitadas",
+                "description": "Sin límites diarios. Descarga todos los videos, reels y fotos que necesites."
+            },
+            "crossPlatform": {
+                "title": "Multiplataforma",
+                "description": "Funciona en cualquier dispositivo - Windows, Mac, iOS, Android. Sin instalación de apps."
+            },
+            "secure": {
+                "title": "Seguro y Privado",
+                "description": "Tus datos permanecen privados. Sin registro requerido, sin datos almacenados. 100% anónimo."
+            }
+        }
+    },
+    "howItWorks": {
+        "title": "Cómo Funciona",
+        "subtitle": "Descarga contenido de Instagram en 3 simples pasos",
+        "steps": {
+            "step1": {
+                "number": "01",
+                "title": "Copia el Enlace",
+                "description": "Encuentra la publicación, reel o historia de Instagram que quieres descargar y copia su URL."
+            },
+            "step2": {
+                "number": "02",
+                "title": "Pega y Analiza",
+                "description": "Pega la URL en InstaOrbit. Nuestro sistema analiza el contenido instantáneamente."
+            },
+            "step3": {
+                "number": "03",
+                "title": "Descarga",
+                "description": "Haz clic en descargar y guarda el contenido en tu dispositivo en calidad HD."
+            }
+        }
+    },
+    "faq": {
+        "title": "Preguntas Frecuentes",
+        "subtitle": "Todo lo que necesitas saber sobre InstaOrbit",
+        "items": {
+            "q1": {
+                "question": "¿InstaOrbit es gratis?",
+                "answer": "¡Sí! InstaOrbit es completamente gratis. Sin cargos ocultos, sin suscripciones, sin planes premium. Descarga contenido ilimitado de Instagram sin costo."
+            },
+            "q2": {
+                "question": "¿Necesito crear una cuenta?",
+                "answer": "No se necesita cuenta. Simplemente pega la URL de Instagram y descarga. No almacenamos ningún dato personal."
+            },
+            "q3": {
+                "question": "¿Qué contenido puedo descargar?",
+                "answer": "Puedes descargar Reels, Videos, Fotos, Historias, IGTV y publicaciones de carrusel de Instagram. Todo en calidad HD original."
+            },
+            "q4": {
+                "question": "¿Es seguro usar InstaOrbit?",
+                "answer": "Absolutamente. Usamos conexiones HTTPS seguras, no almacenamos datos de usuarios y nunca pedimos tus credenciales de Instagram."
+            },
+            "q5": {
+                "question": "¿Por qué no funciona mi descarga?",
+                "answer": "Asegúrate de que la publicación de Instagram sea pública. El contenido de cuentas privadas no se puede descargar. También verifica que estés usando el formato de URL correcto."
+            },
+            "q6": {
+                "question": "¿Puedo descargar de cuentas privadas?",
+                "answer": "No, InstaOrbit solo funciona con publicaciones públicas de Instagram. Respetamos la privacidad de los usuarios y las restricciones de contenido."
+            }
+        }
+    },
+    "footer": {
+        "copyright": "© {year} InstaOrbit. Todos los derechos reservados.",
+        "disclaimer": "InstaOrbit no está afiliado con Instagram o Meta. Por favor respeta los derechos de los creadores de contenido.",
+        "links": {
+            "privacy": "Política de Privacidad",
+            "terms": "Términos de Servicio",
+            "contact": "Contáctanos"
+        }
+    },
+    "errors": {
+        "invalidUrl": "Por favor ingresa una URL de Instagram válida",
+        "fetchError": "Error al obtener contenido. Por favor intenta de nuevo.",
+        "privateContent": "Este contenido es de una cuenta privada",
+        "notFound": "Contenido no encontrado"
+    },
+    "common": {
+        "loading": "Cargando...",
+        "download": "Descargar",
+        "share": "Compartir",
+        "copy": "Copiar Enlace",
+        "success": "¡Éxito!",
+        "error": "Error"
+    },
+    "breadcrumbs": {
+        "home": "Inicio",
+        "features": "Características",
+        "howItWorks": "Cómo Funciona",
+        "faq": "Preguntas Frecuentes"
+    },
+    "alt": {
+        "logo": "Logo InstaOrbit - Descargador de Instagram Gratis",
+        "downloadIcon": "Icono de descarga de contenido Instagram",
+        "featureIcon": "Ilustración de característica",
+        "heroImage": "Interfaz del Descargador InstaOrbit Instagram"
+    }
+}

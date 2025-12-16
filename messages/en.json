@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "title": "InstaOrbit | Free Instagram Video Downloader & Reels Saver - HD No Watermark",
+        "titleTemplate": "{title} | InstaOrbit - Best Instagram Downloader 2025",
+        "description": "Download Instagram videos, reels, stories in HD quality FREE. No watermark, no app required. Best Instagram video downloader, story saver & reels downloader online. Fast, secure, works on iPhone, Android, PC.",
+        "keywords": "instagram video downloader, instagram reels downloader, instagram story saver, story saver, insta downloader, download instagram stories, instagram story viewer, instagram story download, download instagram reels in HD, save instagram reels without watermark, download reels online free, instagram reels video saver, reels downloader app, download IG reels fast, instagram story saver online, download instagram story videos, save instagram stories free, view instagram stories anonymously, instagram story downloader no watermark, watch instagram stories without account, free instagram video downloader, download instagram videos no app, save instagram videos HD quality, instagram IGTV downloader, download carousel instagram posts, instagram video saver online, instagram downloader no watermark, instagram video downloader 4K, instagram downloader no app required, free instagram downloader no signup, download instagram content offline, instagram media downloader free, instasave downloader, saveinsta, insta story saver, instagram story viewer online, how to download instagram videos, how to save instagram stories, best instagram downloader, instagram video downloader online, instagram story saver free, HD quality, 4K, high resolution, no watermark downloads, fast downloads, unlimited downloads, instagram downloader for iPhone, instagram video saver Android, instagram downloader mobile, download instagram on PC, instagram downloader Mac"
+    },
+    "nav": {
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "faq": "FAQ",
+        "download": "Download Now"
+    },
+    "hero": {
+        "badge": "System Online v2.4",
+        "title": "ORBIT",
+        "titleHighlight": "DOWNLOADER",
+        "description": "High-performance media extraction utility for Instagram. Download Videos, Reels, Photos, and IGTV in original quality.",
+        "inputPlaceholder": "Paste Instagram URL here...",
+        "downloadButton": "Download",
+        "supportedFormats": "Supports: Reels, Videos, Photos, Stories, IGTV"
+    },
+    "features": {
+        "title": "Why Choose InstaOrbit?",
+        "subtitle": "The most powerful Instagram downloader with enterprise-grade features",
+        "items": {
+            "fast": {
+                "title": "Lightning Fast Downloads",
+                "description": "Download Instagram content in seconds with our optimized servers. No waiting, no delays."
+            },
+            "hd": {
+                "title": "HD Quality Guaranteed",
+                "description": "Get the highest quality available - up to 4K for videos and original resolution for photos."
+            },
+            "noWatermark": {
+                "title": "No Watermarks",
+                "description": "Download clean content without any watermarks or logos. Pure, original media."
+            },
+            "unlimited": {
+                "title": "Unlimited Downloads",
+                "description": "No daily limits. Download as many videos, reels, and photos as you need."
+            },
+            "crossPlatform": {
+                "title": "Cross Platform",
+                "description": "Works on any device - Windows, Mac, iOS, Android. No app installation required."
+            },
+            "secure": {
+                "title": "Secure & Private",
+                "description": "Your data stays private. No login required, no data stored. 100% anonymous."
+            }
+        }
+    },
+    "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "Download Instagram content in 3 simple steps",
+        "steps": {
+            "step1": {
+                "number": "01",
+                "title": "Copy the Link",
+                "description": "Find the Instagram post, reel, or story you want to download and copy its URL."
+            },
+            "step2": {
+                "number": "02",
+                "title": "Paste & Analyze",
+                "description": "Paste the URL into InstaOrbit. Our system instantly analyzes the content."
+            },
+            "step3": {
+                "number": "03",
+                "title": "Download",
+                "description": "Click download and save the content to your device in HD quality."
+            }
+        }
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about InstaOrbit",
+        "items": {
+            "q1": {
+                "question": "Is InstaOrbit free to use?",
+                "answer": "Yes! InstaOrbit is completely free. No hidden charges, no subscriptions, no premium plans. Download unlimited Instagram content at no cost."
+            },
+            "q2": {
+                "question": "Do I need to create an account?",
+                "answer": "No account needed. Simply paste the Instagram URL and download. We don't store any of your personal data."
+            },
+            "q3": {
+                "question": "What content can I download?",
+                "answer": "You can download Instagram Reels, Videos, Photos, Stories, IGTV, and carousel posts. All in original HD quality."
+            },
+            "q4": {
+                "question": "Is it safe to use InstaOrbit?",
+                "answer": "Absolutely. We use secure HTTPS connections, don't store any user data, and never ask for your Instagram login credentials."
+            },
+            "q5": {
+                "question": "Why isn't my download working?",
+                "answer": "Make sure the Instagram post is public. Private account content cannot be downloaded. Also check that you're using the correct URL format."
+            },
+            "q6": {
+                "question": "Can I download from private accounts?",
+                "answer": "No, InstaOrbit only works with public Instagram posts. We respect user privacy and content restrictions."
+            }
+        }
+    },
+    "footer": {
+        "copyright": "© {year} InstaOrbit. All rights reserved.",
+        "disclaimer": "InstaOrbit is not affiliated with Instagram or Meta. Please respect content creators' rights.",
+        "links": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "contact": "Contact Us"
+        }
+    },
+    "errors": {
+        "invalidUrl": "Please enter a valid Instagram URL",
+        "fetchError": "Failed to fetch content. Please try again.",
+        "privateContent": "This content is from a private account",
+        "notFound": "Content not found"
+    },
+    "common": {
+        "loading": "Loading...",
+        "download": "Download",
+        "share": "Share",
+        "copy": "Copy Link",
+        "success": "Success!",
+        "error": "Error"
+    },
+    "breadcrumbs": {
+        "home": "Home",
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "faq": "FAQ"
+    },
+    "alt": {
+        "logo": "InstaOrbit Logo - Free Instagram Downloader",
+        "downloadIcon": "Download Instagram content icon",
+        "featureIcon": "Feature illustration",
+        "heroImage": "InstaOrbit Instagram Downloader Interface"
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "metadata": {
+        "title": "InstaOrbit | 免费Instagram视频下载器 - Reels故事下载 高清无水印",
+        "titleTemplate": "{title} | InstaOrbit - 最佳Instagram下载工具2025",
+        "description": "免费下载Instagram视频、Reels、故事，高清画质无水印。无需安装应用。最佳Instagram视频下载器、故事保存器、Reels下载器。快速安全，支持iPhone、安卓、电脑。",
+        "keywords": "Instagram视频下载器, Instagram Reels下载器, Instagram故事保存器, 故事保存器, ins下载器, 下载Instagram故事, Instagram故事查看器, Instagram故事下载, 下载Instagram Reels高清, 保存Instagram Reels无水印, 免费在线下载Reels, Instagram Reels视频保存器, Reels下载应用, 快速下载IG Reels, Instagram故事在线保存, 下载Instagram故事视频, 免费保存Instagram故事, 匿名查看Instagram故事, Instagram故事下载器无水印, 无需账号看Instagram故事, 免费Instagram视频下载器, 无需应用下载Instagram视频, 保存Instagram视频高清画质, Instagram IGTV下载器, 下载Instagram轮播帖子, Instagram视频在线保存, Instagram下载器无水印, Instagram视频下载器4K, 无需应用的Instagram下载器, 免费Instagram下载器无需注册, 离线下载Instagram内容, Instagram媒体下载器免费, instasave下载器, saveinsta, ins故事保存器, Instagram故事在线查看器, 如何下载Instagram视频, 如何保存Instagram故事, 最佳Instagram下载器, Instagram视频在线下载器, 免费Instagram故事保存器, 高清画质, 4K, 高分辨率, 无水印下载, 快速下载, 无限下载, iPhone Instagram下载器, 安卓Instagram视频保存器, 手机Instagram下载器, 电脑下载Instagram, Mac Instagram下载器"
+    },
+    "nav": {
+        "features": "功能特点",
+        "howItWorks": "使用方法",
+        "faq": "常见问题",
+        "download": "立即下载"
+    },
+    "hero": {
+        "badge": "系统在线 v2.4",
+        "title": "ORBIT",
+        "titleHighlight": "下载器",
+        "description": "高性能Instagram媒体提取工具。下载视频、快拍、照片和IGTV，保持原始画质。",
+        "inputPlaceholder": "在此粘贴Instagram链接...",
+        "downloadButton": "下载",
+        "supportedFormats": "支持：Reels、视频、照片、故事、IGTV"
+    },
+    "features": {
+        "title": "为什么选择 InstaOrbit？",
+        "subtitle": "最强大的Instagram下载器，具备企业级功能",
+        "items": {
+            "fast": {
+                "title": "闪电般快速下载",
+                "description": "通过我们的优化服务器，几秒钟内下载Instagram内容。无需等待，无延迟。"
+            },
+            "hd": {
+                "title": "高清画质保证",
+                "description": "获取最高可用画质 - 视频最高4K，照片保持原始分辨率。"
+            },
+            "noWatermark": {
+                "title": "无水印",
+                "description": "下载干净的内容，没有任何水印或标志。纯正原始媒体。"
+            },
+            "unlimited": {
+                "title": "无限下载",
+                "description": "没有每日限制。下载任意数量的视频、快拍和照片。"
+            },
+            "crossPlatform": {
+                "title": "跨平台支持",
+                "description": "适用于任何设备 - Windows、Mac、iOS、Android。无需安装应用。"
+            },
+            "secure": {
+                "title": "安全隐私",
+                "description": "您的数据保持私密。无需登录，不存储数据。100%匿名。"
+            }
+        }
+    },
+    "howItWorks": {
+        "title": "使用方法",
+        "subtitle": "3个简单步骤下载Instagram内容",
+        "steps": {
+            "step1": {
+                "number": "01",
+                "title": "复制链接",
+                "description": "找到您想下载的Instagram帖子、快拍或故事，复制其URL。"
+            },
+            "step2": {
+                "number": "02",
+                "title": "粘贴并分析",
+                "description": "将URL粘贴到InstaOrbit。我们的系统会立即分析内容。"
+            },
+            "step3": {
+                "number": "03",
+                "title": "下载",
+                "description": "点击下载，将高清内容保存到您的设备。"
+            }
+        }
+    },
+    "faq": {
+        "title": "常见问题",
+        "subtitle": "关于InstaOrbit您需要了解的一切",
+        "items": {
+            "q1": {
+                "question": "InstaOrbit是免费的吗？",
+                "answer": "是的！InstaOrbit完全免费。没有隐藏费用，没有订阅，没有高级计划。免费下载无限量的Instagram内容。"
+            },
+            "q2": {
+                "question": "我需要创建账户吗？",
+                "answer": "不需要账户。只需粘贴Instagram URL即可下载。我们不存储任何您的个人数据。"
+            },
+            "q3": {
+                "question": "我可以下载什么内容？",
+                "answer": "您可以下载Instagram Reels、视频、照片、故事、IGTV和多图帖子。全部保持原始高清画质。"
+            },
+            "q4": {
+                "question": "使用InstaOrbit安全吗？",
+                "answer": "绝对安全。我们使用安全的HTTPS连接，不存储任何用户数据，也从不要求您的Instagram登录凭据。"
+            },
+            "q5": {
+                "question": "为什么我的下载不起作用？",
+                "answer": "请确保Instagram帖子是公开的。私人账户内容无法下载。还请检查您使用的URL格式是否正确。"
+            },
+            "q6": {
+                "question": "我可以从私人账户下载吗？",
+                "answer": "不可以，InstaOrbit仅适用于公开的Instagram帖子。我们尊重用户隐私和内容限制。"
+            }
+        }
+    },
+    "footer": {
+        "copyright": "© {year} InstaOrbit. 保留所有权利。",
+        "disclaimer": "InstaOrbit与Instagram或Meta无关。请尊重内容创作者的权利。",
+        "links": {
+            "privacy": "隐私政策",
+            "terms": "服务条款",
+            "contact": "联系我们"
+        }
+    },
+    "errors": {
+        "invalidUrl": "请输入有效的Instagram URL",
+        "fetchError": "获取内容失败。请重试。",
+        "privateContent": "此内容来自私人账户",
+        "notFound": "未找到内容"
+    },
+    "common": {
+        "loading": "加载中...",
+        "download": "下载",
+        "share": "分享",
+        "copy": "复制链接",
+        "success": "成功！",
+        "error": "错误"
+    },
+    "breadcrumbs": {
+        "home": "首页",
+        "features": "功能特点",
+        "howItWorks": "使用方法",
+        "faq": "常见问题"
+    },
+    "alt": {
+        "logo": "InstaOrbit Logo - 免费Instagram下载器",
+        "downloadIcon": "下载Instagram内容图标",
+        "featureIcon": "功能插图",
+        "heroImage": "InstaOrbit Instagram下载器界面"
+    }
+}
