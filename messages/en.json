@@ -107,6 +107,7 @@
         "links": {
             "privacy": "Privacy Policy",
             "terms": "Terms of Service",
+            "cookies": "Cookies",
             "contact": "Contact Us"
         }
     },
@@ -325,6 +326,43 @@
                 "title": "Check Our FAQ First",
                 "content": "Many common questions are already answered in our FAQ section. You might find your answer there!",
                 "button": "View FAQ"
+            }
+        },
+        "cookie": {
+            "title": "Cookie Policy",
+            "metaDescription": "InstaOrbit Cookie Policy - Learn about how we use cookies and similar technologies on our website.",
+            "lastUpdated": "Last Updated",
+            "introduction": "This Cookie Policy explains how InstaOrbit uses cookies and similar technologies when you visit our website. We use minimal cookies to ensure the best possible experience.",
+            "sections": {
+                "whatAreCookies": {
+                    "title": "What Are Cookies?",
+                    "content": "Cookies are small text files stored on your device when you visit a website. They help websites remember your preferences and improve your browsing experience.\n\n• Session cookies: Deleted when you close your browser\n• Persistent cookies: Remain on your device for a set period\n• First-party cookies: Set by the website you're visiting\n• Third-party cookies: Set by external services"
+                },
+                "howWeUse": {
+                    "title": "How We Use Cookies",
+                    "content": "We use cookies sparingly and only for essential purposes:\n\n• To remember your language preference\n• To analyze website traffic (anonymously)\n• To improve our service performance\n• We do NOT use cookies for advertising or tracking"
+                },
+                "typesOfCookies": {
+                    "title": "Types of Cookies We Use",
+                    "content": "Essential Cookies:\n• Language preference storage\n• Session management\n\nAnalytics Cookies:\n• Vercel Analytics (anonymous page views)\n• No personal data is collected\n\nWe do NOT use:\n• Advertising cookies\n• Social media tracking cookies\n• Third-party marketing cookies"
+                },
+                "thirdParty": {
+                    "title": "Third-Party Services",
+                    "content": "We use limited third-party services:\n\n• Vercel: Hosting and anonymous analytics\n• No Google Analytics tracking\n• No Facebook Pixel\n• No advertising networks"
+                },
+                "management": {
+                    "title": "Managing Cookies",
+                    "content": "You can control cookies through your browser settings:\n\n• Most browsers allow you to block or delete cookies\n• Blocking cookies may affect website functionality\n• You can set your browser to notify you when cookies are used\n• Visit your browser's help section for specific instructions"
+                },
+                "changes": {
+                    "title": "Changes to This Policy",
+                    "content": "We may update this Cookie Policy from time to time:\n\n• Changes will be posted on this page\n• Significant changes will be announced\n• Continued use constitutes acceptance\n• Last updated: December 2024"
+                }
+            },
+            "questions": {
+                "title": "Questions About Cookies?",
+                "content": "If you have any questions about our use of cookies, please contact us.",
+                "button": "Contact Us"
             }
         }
     }

@@ -28,8 +28,36 @@ export default async function ContactPage({ params }: Props) {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'legal' });
 
+    // ContactPage Schema for SEO
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": t('contact.title'),
+        "url": `${SITE_URL}/${locale}/contact`,
+        "description": t('contact.metaDescription'),
+        "inLanguage": locale === 'zh-CN' ? 'zh-Hans' : locale,
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "InstaOrbit",
+            "url": SITE_URL,
+            "logo": `${SITE_URL}/logo.png`,
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "support@instaorbits.com",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "Spanish", "Chinese", "Russian", "Arabic", "Portuguese", "Japanese", "German", "French", "Hindi"],
+                "areaServed": "Worldwide"
+            }
+        }
+    };
+
     return (
         <>
+            {/* ContactPage Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+            />
             <Navbar />
             <main className="min-h-screen bg-[#0a0a0a] pt-24 pb-16">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,3 +137,4 @@ export default async function ContactPage({ params }: Props) {
         </>
     );
 }
+

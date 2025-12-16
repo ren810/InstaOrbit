@@ -55,8 +55,38 @@ export async function generateMetadata({
 export default function BlogIndexPage({ params: { locale } }: { params: { locale: string } }) {
     const t = useTranslations('blog');
 
+    // CollectionPage Schema for SEO
+    const collectionSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": t('indexTitle'),
+        "description": t('indexDescription'),
+        "url": `${SITE_URL}/${locale}/blog`,
+        "inLanguage": locale === 'zh-CN' ? 'zh-Hans' : locale,
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": blogPosts.length,
+            "itemListElement": blogPosts.map((post, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                    "@type": "BlogPosting",
+                    "name": t(`posts.${post.slug}.title`),
+                    "description": t(`posts.${post.slug}.description`),
+                    "url": `${SITE_URL}/${locale}/blog/${post.slug}`
+                }
+            }))
+        }
+    };
+
     return (
         <div>
+            {/* CollectionPage Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+            />
+
             {/* Header */}
             <header className="mb-12">
                 <div className="flex items-center gap-2 mb-4">
@@ -139,3 +169,4 @@ export default function BlogIndexPage({ params: { locale } }: { params: { locale
         </div>
     );
 }
+

@@ -129,6 +129,27 @@ export default function JsonLdLocalized({ locale }: Props) {
                         "item": `${SITE_URL}/${locale}`
                     }
                 ]
+            },
+            {
+                "@type": "VideoObject",
+                "name": locale === 'en' ? "How to Download Instagram Videos with InstaOrbit" :
+                    locale === 'zh-CN' ? "如何使用InstaOrbit下载Instagram视频" :
+                        locale === 'es' ? "Cómo Descargar Videos de Instagram con InstaOrbit" :
+                            locale === 'ar' ? "كيفية تحميل فيديوهات انستقرام باستخدام InstaOrbit" :
+                                locale === 'pt' ? "Como Baixar Vídeos do Instagram com InstaOrbit" :
+                                    locale === 'ja' ? "InstaOrbitでInstagram動画をダウンロードする方法" :
+                                        locale === 'ru' ? "Как скачать видео из Instagram с помощью InstaOrbit" :
+                                            locale === 'de' ? "So laden Sie Instagram-Videos mit InstaOrbit herunter" :
+                                                locale === 'fr' ? "Comment télécharger des vidéos Instagram avec InstaOrbit" :
+                                                    locale === 'hi' ? "InstaOrbit से Instagram वीडियो कैसे डाउनलोड करें" :
+                                                        "How to Download Instagram Videos with InstaOrbit",
+                "description": description,
+                "thumbnailUrl": `${SITE_URL}/og-image.svg`,
+                "uploadDate": "2024-01-01",
+                "duration": "PT2M30S",
+                "contentUrl": `${SITE_URL}/${locale}`,
+                "embedUrl": `${SITE_URL}/${locale}`,
+                "inLanguage": config.inLanguage
             }
         ]
     };

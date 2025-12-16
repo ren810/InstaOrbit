@@ -2,11 +2,13 @@
 // Uses translations for all text content
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Github, Twitter, Disc } from 'lucide-react';
+import Link from 'next/link';
 
 export const Footer = () => {
   const t = useTranslations('footer');
+  const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -49,10 +51,11 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-base-200/50 uppercase">
           <p>{t('copyright', { year: currentYear })}</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-base-500 transition-colors">{t('links.privacy')}</a>
-            <a href="#" className="hover:text-base-500 transition-colors">{t('links.terms')}</a>
-            <a href="#" className="hover:text-base-500 transition-colors">{t('links.contact')}</a>
+          <div className="flex gap-6 flex-wrap justify-center">
+            <Link href={`/${locale}/privacy-policy`} className="hover:text-base-500 transition-colors">{t('links.privacy')}</Link>
+            <Link href={`/${locale}/terms-of-service`} className="hover:text-base-500 transition-colors">{t('links.terms')}</Link>
+            <Link href={`/${locale}/cookie-policy`} className="hover:text-base-500 transition-colors">{t('links.cookies')}</Link>
+            <Link href={`/${locale}/contact`} className="hover:text-base-500 transition-colors">{t('links.contact')}</Link>
           </div>
         </div>
       </div>
