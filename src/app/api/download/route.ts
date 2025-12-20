@@ -6,7 +6,7 @@ const cache = new Map<string, { data: any; timestamp: number }>();
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
 // Helper: Fetch with timeout
-async function fetchWithTimeout(url: string, options: RequestInit, timeoutMs: number = 8000): Promise<Response> {
+async function fetchWithTimeout(url: string, options: RequestInit, timeoutMs: number = 60000): Promise<Response> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
   
@@ -154,39 +154,35 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'API keys not configured' }, { status: 500 });
     }
 
-    // 🚀 PARALLEL API CALLS - Use first successful response (2x faster!)
-    const results = await Promise.allSettled([
-      tryAPI1(sanitizedUrl, rapidApiKey1),
-      tryAPI2(sanitizedUrl, rapidApiKey2)
-    ]);
+    // 🚀 Fast-fail parallel calls: return as soon as ONE API succeeds
+    const p1 = tryAPI1(sanitizedUrl, rapidApiKey1);
+    const p2 = tryAPI2(sanitizedUrl, rapidApiKey2);
 
-    // Find first successful result
-    for (const result of results) {
-      if (result.status === 'fulfilled') {
-        const response = result.value;
-        
-        // Cache successful response
-        cache.set(url, { data: response, timestamp: Date.now() });
-        
-        console.log(`[API SUCCESS] ${response.api} - ${Date.now() - startTime}ms`);
-        return NextResponse.json(response);
-      }
+    try {
+      const response = await Promise.any([p1, p2]);
+
+      // Cache successful response
+      cache.set(url, { data: response, timestamp: Date.now() });
+      console.log(`[API SUCCESS] ${response.api} - ${Date.now() - startTime}ms`);
+      return NextResponse.json(response);
+    } catch (err) {
+      // All providers failed. Gather their error messages for logging.
+      const settled = await Promise.allSettled([p1, p2]);
+      const errors = settled
+        .filter((r): r is PromiseRejectedResult => r.status === 'rejected')
+        .map(r => r.reason?.message || 'Unknown error');
+
+      console.error(`[API FAIL] All providers failed: ${errors.join(', ')} - ${Date.now() - startTime}ms`);
+
+      // Track failures (mark both as failed)
+      trackApiCall('instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com', false);
+      trackApiCall('instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com', false);
+
+      return NextResponse.json(
+        { error: 'Failed to fetch Instagram media. The post might be private or deleted.' },
+        { status: 404 }
+      );
     }
-
-    // Both APIs failed - log errors
-    const errors = results
-      .filter((r): r is PromiseRejectedResult => r.status === 'rejected')
-      .map(r => r.reason?.message || 'Unknown error');
-    
-    console.error(`[API FAIL] Both APIs failed: ${errors.join(', ')} - ${Date.now() - startTime}ms`);
-    
-    trackApiCall('instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com', false);
-    trackApiCall('instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com', false);
-
-    return NextResponse.json(
-      { error: 'Failed to fetch Instagram media. The post might be private or deleted.' },
-      { status: 404 }
-    );
 
   } catch (error) {
     console.error('API Error:', error);

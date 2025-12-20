@@ -12,6 +12,7 @@ import { Clipboard, Instagram } from 'lucide-react';
 import { useToast } from '@/components/client/ToastSystem';
 import { useSciFiSound } from '@/hooks/useSciFiSound';
 import { HeroResultCard } from '@/components/client/HeroResultCard';
+import { HeroResultSkeleton } from '@/components/client/HeroResultSkeleton';
 import { SystemLog } from '@/components/client/SystemLog';
 import { validateInstagramUrl } from '@/lib/validation';
 import { logger } from '@/lib/logger';
@@ -148,6 +149,10 @@ export const HeroDownloadForm: React.FC = () => {
 
       {/* RESULT SECTION */}
       <AnimatePresence>
+        {state === DownloadState.LOADING && (
+          <HeroResultSkeleton />
+        )}
+
         {state === DownloadState.SUCCESS && result && (
           <HeroResultCard result={result} playSound={playSound} />
         )}
