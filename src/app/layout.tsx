@@ -87,6 +87,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
         <link href="https://fonts.cdnfonts.com/css/schabo" rel="stylesheet" />
+          
+        <script
+          data-site-id="site_iiwkfr6nmkn0zntd"
+          src="https://www.measured.site/js/script.js"
+          data-api-url="https://www.measured.site/api/session"
+          defer
+        ></script>
+      
 
         {/* Favicon and app icons */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
