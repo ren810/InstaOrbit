@@ -105,7 +105,7 @@ export const HeroDownloadForm: React.FC = () => {
         <div className="relative flex flex-col md:flex-row bg-base-400 border border-base-300 clip-corner shadow-2xl">
 
           {/* Input Section */}
-          <div className="flex-1 flex items-center h-24 border-b md:border-b-0 md:border-r border-base-300 bg-base-300/10 transition-colors focus-within:bg-base-300/20 group-focus-within:border-base-500/50">
+          <div className="flex-1 flex items-center min-h-[8vh] md:h-28 border-b md:border-b-0 md:border-r border-base-300 bg-base-300/10 transition-colors focus-within:bg-base-300/20 group-focus-within:border-base-500/50">
             {/* Icon Box */}
             <div className="h-full w-24 flex items-center justify-center border-r border-base-300/50 text-base-500 bg-base-400/50">
               <Instagram className="w-10 h-10" strokeWidth={1.5} />

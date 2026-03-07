@@ -22,7 +22,15 @@ export async function POST(request: NextRequest) {
     }
 
     const sanitizedUrl = encodeURIComponent(url);
-    const rapidApiKey = process.env.RAPIDAPI_KEY || '377b748462msh8771d155e019b30p19bf99jsn1b1fe99821cf';
+    const rapidApiKey1 = process.env.RAPIDAPI_KEY1;
+    const rapidApiKey2 = process.env.RAPIDAPI_KEY2;
+
+    if (!rapidApiKey1 || !rapidApiKey2) {
+      return NextResponse.json(
+        { error: 'API keys not configured' },
+        { status: 500 }
+      );
+    }
 
     let response;
     let apiName = '';
@@ -46,7 +54,7 @@ export async function POST(request: NextRequest) {
           method: 'GET',
           url: apiUrl,
           headers: {
-            'x-rapidapi-key': rapidApiKey,
+            'x-rapidapi-key': rapidApiKey1,
             'x-rapidapi-host': 'instagram-downloader-v2-scraper-reels-igtv-posts-stories.p.rapidapi.com'
           }
         };
@@ -66,7 +74,7 @@ export async function POST(request: NextRequest) {
           method: 'GET',
           url: apiUrl,
           headers: {
-            'x-rapidapi-key': rapidApiKey,
+            'x-rapidapi-key': rapidApiKey2,
             'x-rapidapi-host': 'instagram-downloader-download-instagram-stories-videos4.p.rapidapi.com'
           }
         };

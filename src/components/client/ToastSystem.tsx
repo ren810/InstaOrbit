@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AlertCircle, CheckCircle, Info, X } from 'lucide-react';
 import { useSciFiSound } from '@/hooks/useSciFiSound';
@@ -49,6 +49,8 @@ export const ToastProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   };
 
   // Clipboard Detection on Window Focus
+  const lastDetectedClipboard = useRef<string>('');
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -57,24 +59,20 @@ export const ToastProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         const text = await navigator.clipboard.readText();
         const instagramRegex = /(https?:\/\/)?(www\.)?instagram\.com\/(p|reel|tv|stories)\/[a-zA-Z0-9_-]+\/?/i;
         
-        if (instagramRegex.test(text)) {
-            // Check if we already have a toast for this
-            const alreadyShown = toasts.some(t => t.message.includes("Instagram link detected"));
-            if (!alreadyShown) {
-                showToast("Instagram link detected in clipboard", "info", {
-                    label: "PASTE",
-                    onClick: () => {
-                        const input = document.querySelector('input');
-                        if (input) {
-                            // React specific way to set input value
-                            const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value")?.set;
-                            nativeInputValueSetter?.call(input, text);
-                            input.dispatchEvent(new Event('input', { bubbles: true }));
-                            playSound('click');
-                        }
+        if (instagramRegex.test(text) && text !== lastDetectedClipboard.current) {
+            lastDetectedClipboard.current = text;
+            showToast("Instagram link detected in clipboard", "info", {
+                label: "PASTE",
+                onClick: () => {
+                    const input = document.querySelector('input');
+                    if (input) {
+                        const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, "value")?.set;
+                        nativeInputValueSetter?.call(input, text);
+                        input.dispatchEvent(new Event('input', { bubbles: true }));
+                        playSound('click');
                     }
-                });
-            }
+                }
+            });
         }
       } catch (err) {
         // Clipboard permission denied or empty
@@ -83,7 +81,7 @@ export const ToastProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
     window.addEventListener('focus', handleFocus);
     return () => window.removeEventListener('focus', handleFocus);
-  }, [toasts, playSound]);
+  }, [playSound]);
 
   return (
     <ToastContext.Provider value={{ showToast }}>

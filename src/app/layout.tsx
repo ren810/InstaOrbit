@@ -80,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Optimized font loading with preconnect */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -100,7 +100,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
       </head>
-      <body className="bg-base-400 text-base-100 antialiased overflow-x-hidden">
+      <body className="bg-base-400 text-base-100 antialiased overflow-x-hidden" suppressHydrationWarning>
         <JsonLd />
         {children}
         <Analytics />

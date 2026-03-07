@@ -19,9 +19,16 @@ interface ClientLayoutProps {
 
 export const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || loading) return;
+
+    // Initialize Lenis for smooth scrolling only after preloader is done
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -40,26 +47,28 @@ export const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
     return () => {
       lenis.destroy();
     };
-  }, []);
+  }, [mounted, loading]);
 
   return (
     <>
-      <AnimatePresence>
-        {loading && <Preloader onComplete={() => setLoading(false)} />}
-      </AnimatePresence>
-
-      {!loading && (
-        <motion.main
-          className="relative w-full min-h-screen bg-base-400 text-base-100 selection:bg-base-500 selection:text-white cursor-none"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <CustomCursor />
-          <InteractiveGrid />
-          {children}
-        </motion.main>
+      {mounted && (
+        <AnimatePresence>
+          {loading && <Preloader onComplete={() => setLoading(false)} />}
+        </AnimatePresence>
       )}
+
+      <main
+        className="relative w-full min-h-screen bg-base-400 text-base-100 selection:bg-base-500 selection:text-white cursor-none"
+        style={mounted && loading ? { visibility: 'hidden', position: 'fixed', top: 0, left: 0, width: '100%' } : {}}
+      >
+        {mounted && !loading && (
+          <>
+            <CustomCursor />
+            <InteractiveGrid />
+          </>
+        )}
+        {children}
+      </main>
     </>
   );
 };
